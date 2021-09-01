@@ -9,7 +9,6 @@ public class _3040_in_progress {
 	static int[] numbers;
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 		arr = new int[9];
 		numbers = new int[7];
