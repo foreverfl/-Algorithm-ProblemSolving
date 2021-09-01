@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
  
-public class _11404 {
+public class _11404_in_progress {
         
     public static int cityCount;
     public static int[][] distance;

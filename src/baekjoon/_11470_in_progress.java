@@ -2,7 +2,7 @@ package baekjoon;
 
 import java.util.Scanner;
 
-public class _11470 {
+public class _11470_in_progress {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -23,6 +23,7 @@ public class _11470 {
 
 	}
 
+	// 입력값 제한
 	public boolean checkStr(String textInput) {
 
 		char chrInput;
