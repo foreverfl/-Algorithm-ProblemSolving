@@ -1,4 +1,4 @@
-package jungol;
+package jungol_complete;
 
 public class _101 {
 
