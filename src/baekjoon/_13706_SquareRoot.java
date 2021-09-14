@@ -31,6 +31,7 @@ public class _13706_SquareRoot {
 			x = mid.multiply(mid);
 
 			int ret = x.compareTo(target);
+			
 			if (ret == 0) {
 				System.out.println(mid.toString());
 				break;
@@ -39,7 +40,7 @@ public class _13706_SquareRoot {
 				left = mid.add(one); // x(mid*mid) is smaller than the 'num' ¡æ left = mid + 1
 
 			} else if (ret == 1) {
-				right = mid.subtract(one); // x(mid*mid) is largers than the 'num' ¡æ right = mid-1
+				right = mid.subtract(one); // x(mid*mid) is larger than the 'num' ¡æ right = mid-1
 
 			}
 		}
