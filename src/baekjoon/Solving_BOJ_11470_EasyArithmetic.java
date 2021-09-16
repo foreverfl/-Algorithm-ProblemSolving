@@ -2,7 +2,7 @@ package baekjoon;
 
 import java.util.Scanner;
 
-public class _11470_in_progress {
+public class Solving_BOJ_11470_EasyArithmetic {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);

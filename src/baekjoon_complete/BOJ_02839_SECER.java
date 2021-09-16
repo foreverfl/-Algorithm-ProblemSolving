@@ -1,8 +1,8 @@
-package baekjoon;
+package baekjoon_complete;
 
 import java.util.Scanner;
 
-public class _2839 {
+public class BOJ_02839_SECER {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
