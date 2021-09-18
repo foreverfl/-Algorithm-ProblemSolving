@@ -23,7 +23,7 @@ public class BOJ_11399_ATM {
 		}
 	
 		for (int i = 0; i < result.length; i++) {
-			result[i] = (person[i] * calculation[i]);
+			result[i] = (person[i] * calculation[i]); // 1 * the young ~ n * the old
 			sum += result[i];
 		}
 		System.out.println(sum);

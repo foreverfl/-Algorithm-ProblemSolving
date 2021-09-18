@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
-public class BOJ_11470_CoinZero {
+public class BOJ_11047_CoinZero {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {

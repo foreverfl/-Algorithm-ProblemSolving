@@ -2,7 +2,7 @@ package BOJ;
 
 import java.util.Scanner;
 
-public class _9663 {
+public class Copying_BOJ_09663_NQueen {
 
 	public static int N;
 	public static int count;
