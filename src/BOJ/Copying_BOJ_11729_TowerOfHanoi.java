@@ -2,7 +2,7 @@ package BOJ;
 
 import java.util.Scanner;
 
-public class Baekjoon_Copy_11729_TowerOfHanoi {
+public class Copying_BOJ_11729_TowerOfHanoi {
 
 	public static StringBuilder sb = new StringBuilder();
 

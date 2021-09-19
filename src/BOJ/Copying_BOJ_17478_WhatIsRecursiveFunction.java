@@ -2,7 +2,7 @@ package BOJ;
 
 import java.util.Scanner;
 
-public class Baekjoon_Copy_17478_WhatIsRecursiveFunction {
+public class Copying_BOJ_17478_WhatIsRecursiveFunction {
 
 	static String underBar = "";
 	static String sArr[];

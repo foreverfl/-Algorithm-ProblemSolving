@@ -2,7 +2,7 @@ package BOJ;
 
 import java.util.Scanner;
 
-public class Baekjoon_Copy_15649_NAndM {
+public class Copying_BOJ_15649_NAndM {
 
 	public static int[] arr;
 	public static boolean[] visit;
