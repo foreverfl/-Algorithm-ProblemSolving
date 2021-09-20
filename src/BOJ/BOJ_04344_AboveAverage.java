@@ -1,35 +1,35 @@
 package BOJ;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.util.Scanner;
 
 public class BOJ_04344_AboveAverage {
-	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		int testCase = Integer.parseInt(br.readLine());
-		for (int i = 0; i < testCase; i++) {
-			String str = br.readLine();
-			String arr[] = str.split(" ");
-			int sum = 0;
-			double avg = 0;
-			int count = 0;
-			double result = 0;
-			for (int j = 1; j < arr.length - 1; j++) {
-				sum += Integer.parseInt(arr[j]);
-				avg = sum / Integer.parseInt(arr[0]);
-			}
-			for (int j = 1; j < arr.length - 1; j++)
-				if (Integer.parseInt(arr[j]) > avg) {
-					count++;
-				}
-			System.out.format("%.3f%%%n", count / (arr.length - 1) * 100.0);
-			System.out.println(sum);
-			System.out.println(avg);
-			System.out.println(count);
-			System.out.println(arr.length - 1);
-			System.out.println(result);
+	public static void main(String[] args) {
+		@SuppressWarnings("resource")
+		Scanner sc = new Scanner(System.in);
+		int C = sc.nextInt(); // test case
 
+		for (int i = 0; i < C; i++) {
+			int N = sc.nextInt(); // the number of a class
+			int arr[] = new int[N];
+			int sum = 0;
+			int avg = 0;
+			int cnt = 0;
+			for (int j = 0; j < N; j++) {
+				arr[j] = sc.nextInt();
+				sum += arr[j];
+
+			}
+			avg = sum / N;
+			for (int j = 0; j < N; j++) {
+				if (arr[j] > avg) {
+					cnt++;
+				}
+			}
+			double result = ((double)cnt / N) * 100;
+			System.out.printf("%.3f%%\n", result); // %% ¡æ %
+			sum = 0;
+			avg = 0;
+			cnt = 0;
 		}
 
 	}

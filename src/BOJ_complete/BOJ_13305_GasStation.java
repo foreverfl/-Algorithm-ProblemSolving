@@ -1,4 +1,4 @@
-package BOJ;
+package BOJ_complete;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -12,26 +12,22 @@ public class BOJ_13305_GasStation {
 		StringBuilder sb = new StringBuilder();
 
 		Long N = Long.parseLong(br.readLine());
-
-		String str = br.readLine();
-		StringTokenizer st1 = new StringTokenizer(str);
-
 		long distance[] = new long[(int) (N - 1)];
-		long city[] = new long[(int) (N + 1)];
+		long city[] = new long[(int) (N + 1)]; // declaring as the 'N+1' because of operation
 		long answer[] = new long[(int) (N - 1)];
 		long sum = 0;
+
+		String str = br.readLine();
+		StringTokenizer st1 = new StringTokenizer(str); // distance input
 
 		for (int i = 0; i < distance.length; i++) {
 			distance[i] = Long.parseLong(st1.nextToken()); // Without the 'Long.parseLong()', can't get full score.
 		}
 
-		str = br.readLine();
+		str = br.readLine(); // city input
 		StringTokenizer st2 = new StringTokenizer(str);
 		for (int i = 0; i < city.length - 1; i++) {
 			city[i] = Long.parseLong(st2.nextToken());
-			if (city[i + 1] > city[i]) {
-				city[i + 1] = city[i];
-			}
 		}
 
 		for (int i = 0; i < city.length - 1; i++) { // If gas cost of a next city is more expensive than the former one,
