@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 // If a problem can be solved without an array, using the array is not recommended.
 
-public class _126_NotUsingAnArray {
+public class _126 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);

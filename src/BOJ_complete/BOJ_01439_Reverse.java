@@ -1,4 +1,4 @@
-package BOJ;
+package BOJ_complete;
 
 import java.util.Scanner;
 
@@ -11,13 +11,13 @@ public class BOJ_01439_Reverse {
 		String Check = "";
 		String arr1[] = Input.split("");
 
-		if (arr1[0].equals("0")) { // 첫 값이 0이면 A, 1이면 B
+		if (arr1[0].equals("0")) { // the first digit is 0 → A, the first digit is 1 → B
 			Check = "A";
 		} else if (arr1[0].equals("1")) {
 			Check = "B";
 		}
 
-		for (int i = 1; i < arr1.length; i++) { // 연속된 0은 A, 연속된 1은 B
+		for (int i = 1; i < arr1.length; i++) { // consecutive 0 is A, consecutive 1 is B
 			if (arr1[i - 1].equals("1") && (arr1[i].equals("0"))) { //
 				Check += "A";
 			} else if (arr1[i - 1].equals("0") && (arr1[i].equals("0"))) {

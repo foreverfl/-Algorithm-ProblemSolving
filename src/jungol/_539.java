@@ -2,7 +2,7 @@ package jungol;
 
 import java.util.Scanner;
 
-public class _539_InputtingInTheInfiniteLoop {
+public class _539 {
 	public static void main(String args[]) {
 		Scanner sc = new Scanner(System.in);
 
