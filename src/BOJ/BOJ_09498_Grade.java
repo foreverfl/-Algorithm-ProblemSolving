@@ -3,7 +3,7 @@ package BOJ;
 import java.util.Scanner;
 
 
-public class BOJ_9498_Grade {
+public class BOJ_09498_Grade {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);

@@ -1,38 +1,58 @@
 package BOJ;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class BOJ_11470_EasyArithmetic {
 
-	@SuppressWarnings("resource")
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		List<String> list = new ArrayList<String>();
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String input = br.readLine();
 
-		String str = sc.next();
-		String arr[] = str.split("");
+		// adding '+'
+		String[] arr = input.split("");
 		for (int i = 0; i < arr.length; i++) {
-			list.add(arr[i]);
-		}
-
-		for (int i = 0; i < list.size() - 2; i++) {
-			if (list.get(i).equals("-")) { // - 이후의 숫자에 +값 붙이기
-				list.add(i + 2, "+");
+			if (arr[i].equals("-")) {
+				arr[i + 1] = arr[i + 1] + "+";
 			}
 		}
+		input = String.join("", arr);
 
-		for (int i = 0; i < list.size() - 1; i++) {
-			if (list.get(i).equals("+") && list.get(i + 1).equals("-")) {
-				list.remove(i);
+		// Numbers have no leading zeroes.
+		for (int i = 0; i < arr.length - 1; i++) {
+			arr = input.split("");
+			if (arr[i].equals("+") && arr[i + 1].equals("0")) {
+				arr[i + 1] = "0+";
 			}
-			if (list.get(i).equals("+") && list.get(i + 1).equals("+")) {
-				list.remove(i);
+
+			input = String.join("", arr);
+		}
+		// There are no two consecutive signs.
+		arr = input.split("");
+		for (int i = 0; i < arr.length - 1; i++) {
+			if (arr[i].equals("+") && arr[i + 1].equals("+")) {
+				arr[i] = "";
+			}
+			if (arr[i].equals("-") && arr[i + 1].equals("-")) {
+				arr[i] = "";
+			}
+			if (arr[i].equals("+") && arr[i + 1].equals("-")) {
+				arr[i] = "";
+			}
+			if (arr[i].equals("-") && arr[i + 1].equals("+")) {
+				arr[i] = "";
 			}
 		}
+		input = String.join("", arr);
 
-		System.out.print(String.join("", list));
+		// The last character of the expression is a digit.
+		arr = input.split("");
+		if (arr[arr.length - 1].equals("+") || arr[arr.length - 1].equals("-"))
+			arr[arr.length - 1] = "";
+		input = String.join("", arr);
+
+		System.out.println(input);
 
 	}
 }
