@@ -11,7 +11,6 @@ public class BOJ_23901_BikeTour {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int T = Integer.parseInt(br.readLine());
 		int[] testCase = new int[T];
-		int max = 0;
 		int cnt = 0;
 
 		for (int i = 0; i < T; i++) {
