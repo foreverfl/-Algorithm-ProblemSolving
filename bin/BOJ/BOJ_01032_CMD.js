@@ -7,6 +7,6 @@ for (let i = 2; i <= T; i++) {
         if (result[j] !== input[i][j]) {
             result = result.substring(0, j) + '?' + result.substring(j + 1);
         }
-    }
+    }   
 }
 console.log(result);

@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.StringTokenizer;
 
-public class BOJ_18870_CondensingCoordinates {
+public class Copied_BOJ_18870_CondensingCoordinates {
 
 	public static void main(String[] args) throws IOException {
 
