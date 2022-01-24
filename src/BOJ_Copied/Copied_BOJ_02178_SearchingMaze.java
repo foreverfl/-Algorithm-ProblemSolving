@@ -18,7 +18,7 @@ public class Copied_BOJ_02178_SearchingMaze {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringTokenizer st = new StringTokenizer(br.readLine());
+		StringTokenizer st = new StringTokenizer(br.readLine()); 
 		N = Integer.parseInt(st.nextToken());
 		M = Integer.parseInt(st.nextToken());
 
@@ -49,7 +49,7 @@ public class Copied_BOJ_02178_SearchingMaze {
 				int nextX = nowX + dx[i];
 				int nextY = nowY + dy[i];
 
-				if (nextX < 0 || nextY < 0 || nextX >= N || nextY >= M)
+				if (nextX < 0 || nextY < 0 || nextX >= N || nextY >= M) 
 					continue;
 				if (visited[nextX][nextY] || map[nextX][nextY] == 0)
 					continue;

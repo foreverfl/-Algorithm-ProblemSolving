@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-public class Copied_BOJ_1260_DFSAndBFS {
+public class Copied_BOJ_01260_DFSAndBFS {
 
 	static int[][] check;
 	static boolean[] checked;
@@ -16,8 +16,8 @@ public class Copied_BOJ_1260_DFSAndBFS {
 	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
 		Scanner sc = new Scanner(System.in);
-		N = sc.nextInt();
-		M = sc.nextInt();
+		N = sc.nextInt(); // vertex
+		M = sc.nextInt(); // edge
 		start = sc.nextInt();
 
 		check = new int[1001][1001]; // The value of the 'check[][]' is '1001' to accept coordinates as it is.
