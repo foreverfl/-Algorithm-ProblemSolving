@@ -1,4 +1,4 @@
-package BOJ;
+package BOJ_Copied;
 
 import java.util.ArrayList;
 import java.util.Scanner;
