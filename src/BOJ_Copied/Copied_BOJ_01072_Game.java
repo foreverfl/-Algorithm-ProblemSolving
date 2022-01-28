@@ -12,12 +12,13 @@ public class Copied_BOJ_01072_Game {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		long X, Y;
-		StringTokenizer st = new StringTokenizer(br.readLine());
-		X = Long.parseLong(st.nextToken());
-		Y = Long.parseLong(st.nextToken());
+		StringTokenizer st;
+
+		st = new StringTokenizer(br.readLine());
+		long X = Long.parseLong(st.nextToken());
+		long Y = Long.parseLong(st.nextToken());
 		long Z = 100 * Y / X;
-		if (Z >= 99) {
+		if (Z >= 99) { // The 'Z' cannot be 100%.
 			bw.write("-1");
 		} else {
 			long start = 0;
