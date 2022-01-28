@@ -2,7 +2,7 @@ package BOJ;
 
 import java.util.Scanner;
 
-public class BOJ_02442_PrintingStars5 {
+public class BOJ_02442_PrintingStars_5 {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {
