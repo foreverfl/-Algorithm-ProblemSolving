@@ -14,8 +14,4 @@ public class BOJ_01000_APlusB {
 	}
 
 }
-<<<<<<< HEAD
 
-
-=======
->>>>>>> refs/remotes/origin/master
