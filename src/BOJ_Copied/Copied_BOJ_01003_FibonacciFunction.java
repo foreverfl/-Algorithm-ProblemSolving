@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Copied_BOJ_1003_FibonacciFunction {
+public class Copied_BOJ_01003_FibonacciFunction {
 
 	static Integer[][] dp = new Integer[41][2];
 

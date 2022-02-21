@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Copied_BOJ_1978_FindingPrimeNumber {
+public class Copied_BOJ_01978_FindingPrimeNumber {
 
 	static boolean[] isNotPrime = new boolean[1001];
 
