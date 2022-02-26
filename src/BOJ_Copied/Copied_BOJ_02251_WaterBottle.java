@@ -1,4 +1,4 @@
-package BOJ;
+package BOJ_Copied;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,7 +7,7 @@ import java.util.Set;
 import java.util.StringTokenizer;
 import java.util.TreeSet;
 
-public class BOJ_02251_WaterBottle {
+public class Copied_BOJ_02251_WaterBottle {
 
 	static int[] limit;
 	static boolean[][] check;
@@ -32,13 +32,14 @@ public class BOJ_02251_WaterBottle {
 	}
 
 	static void dfs(int a, int b, int c) {
-		if (check[a][b])
+		if (check[a][b]) // exit condition
 			return;
 
 		if (a == 0) {
 			answer.add(c);
 		}
 		check[a][b] = true;
+		
 		// 0 -> 1
 		if (a + b > limit[1]) {
 			dfs((a + b) - limit[1], limit[1], c);
