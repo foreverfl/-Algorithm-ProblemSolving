@@ -13,12 +13,14 @@ public class BOJ_01145_MultiplesOfMostNumbers {
 		StringTokenizer st;
 
 		long[] arr = new long[5];
-		long repeat = 1;
+		long repeat = 1; // maximum
+		
 		st = new StringTokenizer(br.readLine());
 		for (int i = 0; i < 5; i++) {
 			arr[i] = Long.parseLong(st.nextToken());
 			repeat *= arr[i];
 		}
+		
 		Arrays.sort(arr);
 
 		int cnt = 0;
