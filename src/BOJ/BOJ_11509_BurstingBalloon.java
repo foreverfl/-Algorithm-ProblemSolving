@@ -7,6 +7,8 @@ import java.util.StringTokenizer;
 
 public class BOJ_11509_BurstingBalloon {
 
+	static int[] arrowHeight = new int[1000002]; // The '1000001' causes the 'out of bound' exception
+
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st;
@@ -19,16 +21,20 @@ public class BOJ_11509_BurstingBalloon {
 			arr[i] = Integer.parseInt(st.nextToken());
 		}
 
-		int cnt = 0;
+		int cnt = 0, height = 0;
 		for (int i = 0; i < N; i++) {
-			if (arr[i] != 0) {
-				int arrow_first = arr[i];
+
+			height = arr[i];
+
+			if (arrowHeight[height + 1] == 0) {
+				arrowHeight[height]++;
 				cnt++;
-				for (int j = i; j < N; j++) {
-					if (arrow_first - 1 == arr[j]) {
-						arr[j] = 0;						
-					}
-				}
+				
+			} else {
+
+				arrowHeight[height + 1]--;
+				arrowHeight[height]++;
+
 			}
 		}
 
@@ -37,3 +43,5 @@ public class BOJ_11509_BurstingBalloon {
 	}
 
 }
+
+// reference: https://jaimemin.tistory.com/507
