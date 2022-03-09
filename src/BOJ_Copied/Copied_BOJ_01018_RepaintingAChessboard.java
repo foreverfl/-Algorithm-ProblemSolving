@@ -1,4 +1,4 @@
-package BOJ;
+package BOJ_Copied;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -24,9 +24,9 @@ public class Copied_BOJ_01018_RepaintingAChessboard {
 
 			for (int j = 0; j < M; j++) {
 				if (str.charAt(j) == 'W') {
-					arr[i][j] = true; // W일 때는 true
+					arr[i][j] = true; // W → true
 				} else {
-					arr[i][j] = false; // B일 때는 false
+					arr[i][j] = false; // B → false
 				}
 
 			}
@@ -43,12 +43,12 @@ public class Copied_BOJ_01018_RepaintingAChessboard {
 		System.out.println(min);
 	}
 
-	public static void find(int x, int y) {
+	private static void find(int x, int y) {
 		int end_x = x + 8;
 		int end_y = y + 8;
 		int count = 0;
 
-		boolean TF = arr[x][y]; // 첫 번째 칸의 색
+		boolean TF = arr[x][y]; // a color of the first block
 
 		for (int i = x; i < end_x; i++) {
 			for (int j = y; j < end_y; j++) {
@@ -58,24 +58,16 @@ public class Copied_BOJ_01018_RepaintingAChessboard {
 					count++;
 				}
 
-				/*
-				 * 다음 칸은 색이 바뀌므로 true라면 false로, false 라면 true 로 값을 변경한다.
-				 */
-				TF = (!TF);
+				TF = (!TF); // changing color
 			}
 
 			TF = !TF;
 		}
 
-		/*
-		 * 첫 번째 칸을 기준으로 할 때의 색칠 할 개수(count)와 첫 번째 칸의 색의 반대되는 색을 기준으로 할 때의 색칠 할 개수(64 -
-		 * count) 중 최솟값을 count 에 저장
-		 */
 		count = Math.min(count, 64 - count);
 
-		/*
-		 * 이전까지의 경우 중 최솟값보다 현재 count 값이 더 작을 경우 최솟값을 갱신
-		 */
 		min = Math.min(min, count);
 	}
 }
+
+// reference: https://st-lab.tistory.com/101
