@@ -14,7 +14,7 @@ public class Programmers_42889_RateOfFail {
 //		}
 //
 //		System.out.println();
-		
+
 		for (int i = 0; i < solution(N_2, stages_2).length; i++) {
 			System.out.print(solution(N_2, stages_2)[i] + " ");
 		}
@@ -37,9 +37,9 @@ public class Programmers_42889_RateOfFail {
 			}
 			operation[i - 1] = (double) numerator / denominator;
 		}
-		
-		for(int i=0; i<operation.length; i++) {
-			if(Double.isNaN(operation[i])) {
+
+		for (int i = 0; i < operation.length; i++) {
+			if (Double.isNaN(operation[i])) {
 				operation[i] = 0;
 			}
 		}

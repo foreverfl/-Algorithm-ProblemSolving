@@ -4,10 +4,18 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class BOJ_16916_APartOfStrings {
+public class Copied_BOJ_16916_APartOfStrings {
 	static int ans = 0;
 
-	static int[] getPi(String pattern) {
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String origin = br.readLine();
+		String pattern = br.readLine();
+		KMP(origin, pattern);
+		System.out.println(ans);
+	}
+
+	private static int[] getPi(String pattern) {
 		int[] pi = new int[pattern.length()];
 		int j = 0;
 		for (int i = 1; i < pattern.length(); i++) {
@@ -20,7 +28,7 @@ public class BOJ_16916_APartOfStrings {
 		return pi;
 	}
 
-	static void KMP(String origin, String ptn) {
+	private static void KMP(String origin, String ptn) {
 		int[] pi = getPi(ptn);
 		int j = 0;
 		for (int i = 0; i < origin.length(); i++) {
@@ -36,12 +44,6 @@ public class BOJ_16916_APartOfStrings {
 			}
 		}
 	}
-
-	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		String origin = br.readLine();
-		String pattern = br.readLine();
-		KMP(origin, pattern);
-		System.out.println(ans);
-	}
 }
+
+// reference: https://imnotabear.tistory.com/117
