@@ -1,4 +1,4 @@
-package BOJ;
+package BOJ_Copied;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -33,10 +33,9 @@ public class Copied_BOJ_02638_Cheese {
 		for (int i = 0; i < N; i++) {
 			st = new StringTokenizer(br.readLine());
 			for (int j = 0; j < M; j++) {
-				int value = Integer.parseInt(st.nextToken());
-				map[i][j] = value;
+				map[i][j] = Integer.parseInt(st.nextToken());
 
-				if (value == 1)
+				if (map[i][j] == 1)
 					count++;
 			}
 		}
@@ -53,7 +52,9 @@ public class Copied_BOJ_02638_Cheese {
 			}
 
 			visited = new boolean[N][M];
+			
 			checkExternalAir(0, 0);
+			
 			for (int i = 0; i < N; i++) {
 				for (int j = 0; j < M; j++) {
 					map[i][j] = map[i][j] == 3 ? 2 : map[i][j];
@@ -66,7 +67,7 @@ public class Copied_BOJ_02638_Cheese {
 		System.out.println(answer);
 	}
 
-	// 외부와 접촉한 공기 '2'로 표시
+	// marking external air as the 2
 	static void checkExternalAir(int x, int y) {
 		visited[x][y] = true;
 		map[x][y] = 2;
@@ -90,7 +91,7 @@ public class Copied_BOJ_02638_Cheese {
 
 		if (map[x][y] == 1 && isMelt(x, y)) {
 			--count;
-			map[x][y] = 3; // 녹은 치즈는 3으로 바꿔준다 (0으로 바꾸면 언제 녹았는지 구분 불가)
+			map[x][y] = 3; // The melted cheese turn into the '3'.
 		}
 
 		for (int i = 0; i < 4; i++) {
