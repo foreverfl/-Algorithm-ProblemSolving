@@ -1,30 +1,14 @@
 package Programmers;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.StringTokenizer;
 
 public class Programmers_77485_RotatingAroundMatrix {
 
 	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringTokenizer st;
-
-		st = new StringTokenizer(br.readLine());
-		int rows = Integer.parseInt(st.nextToken());
-		int columns = Integer.parseInt(st.nextToken());
-
-		int cnt_query = Integer.parseInt(br.readLine());
-		int[][] queries = new int[cnt_query][4];
-		for (int i = 0; i < cnt_query; i++) {
-			st = new StringTokenizer(br.readLine());
-			for (int j = 0; j < 4; j++) {
-				queries[i][j] = Integer.parseInt(st.nextToken());
-			}
-		}
+		int rows = 6, columns = 6;
+		int[][] queries = { { 2, 2, 5, 4 }, { 3, 3, 6, 6 }, { 5, 1, 6, 3 } };
 
 		int[] ans = solution(rows, columns, queries);
 		for (int i = 0; i < ans.length; i++) {
@@ -48,14 +32,20 @@ public class Programmers_77485_RotatingAroundMatrix {
 		for (int i = 0; i < tmp; i++) {
 			// extraction
 			List<Integer> rotate = new ArrayList<>();
-			int start_y = queries[i][0] - 1;
+			int start_y = queries[i][0] - 1; // matching with index
 			int start_x = queries[i][1] - 1;
 			int end_y = queries[i][2] - 1;
 			int end_x = queries[i][3] - 1;
 
+			// {2, 2} {5, 4}
+			// {1, 1} {4, 3}
+			// {y, x} {y, x}
+
 			for (int j = start_x; j <= end_x; j++) {
 				rotate.add(map[start_y][j]);
 			}
+			
+			// map[y][x]
 
 			for (int j = start_y + 1; j <= end_y; j++) {
 				rotate.add(map[j][end_x]);

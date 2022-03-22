@@ -1,4 +1,4 @@
-package BOJ;
+package BOJ_Copied;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -19,26 +19,27 @@ public class Copied_BOJ_01135_SpreadingNews {
 		int n = Integer.parseInt(br.readLine());
 		StringTokenizer st;
 
+		int root = 0;
 		list = new ArrayList[n];
-		int rt = 0;
 		dp = new int[n];
+		
 		st = new StringTokenizer(br.readLine());
 		for (int i = 0; i < n; i++) {
 			list[i] = new ArrayList<>();
 			int a = Integer.parseInt(st.nextToken());
 			if (a == -1) {
-				rt = i;
+				root = i;
 			} else {
-				list[a].add(i);
+				list[a].add(i); // a -> parent, i -> child(current)
 			}
 		}
-		int min = solve(rt);
+		int min = solve(root);
 		System.out.println(min);
 	}
 
-	static int solve(int idx) {
+	private static int solve(int idx) {
 		for (int nxt : list[idx]) {
-			dp[nxt] = 1 + solve(nxt);
+			dp[nxt] = 1 + solve(nxt); // top -> bottom
 		}
 		Collections.sort(list[idx], new DepthComp());
 		int res = 0;
@@ -50,7 +51,7 @@ public class Copied_BOJ_01135_SpreadingNews {
 		return res;
 	}
 
-	static class DepthComp implements Comparator<Integer> {
+	private static class DepthComp implements Comparator<Integer> { // The value whose depth is deeper comes first.
 		@Override
 		public int compare(Integer o1, Integer o2) {
 			return dp[o2] - dp[o1];

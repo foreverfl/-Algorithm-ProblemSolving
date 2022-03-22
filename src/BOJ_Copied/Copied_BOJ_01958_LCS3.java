@@ -1,4 +1,4 @@
-package BOJ;
+package BOJ_Copied;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -48,3 +48,5 @@ public class Copied_BOJ_01958_LCS3 {
 	}
 
 }
+
+// reference: https://lotuslee.tistory.com/123

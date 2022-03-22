@@ -46,7 +46,7 @@ public class Programmers_77484_Lotto {
 				cnt_0++;
 		}
 
-		int max = match + cnt_0;
+		int max = match + cnt_0; 
 		int min = match;
 
 		int[] answer = { rank(max), rank(min) };

@@ -23,16 +23,20 @@ public class Copied_Programmers_72413_FareForCarpooling {
 			node[i][i] = 0;
 		}
 
+		// [[4, 1, 10], [3, 5, 24], [5, 6, 2], [3, 1, 41], [5, 1, 24], [4, 6, 50], [2, 4, 66], [2, 3, 22], [1, 6, 25]]
 		for (int i = 0; i < fares.length; i++) {
 			node[fares[i][0]][fares[i][1]] = fares[i][2];
 			node[fares[i][1]][fares[i][0]] = fares[i][2];
 		}
+		// fares[i][0] -> 정점1
+		// fares[i][1] -> 정점2
+		// fares[i][2] -> 비용
 
 		for (int k = 1; k < n + 1; k++) {
 			for (int i = 1; i < n + 1; i++) {
 				for (int j = 1; j < n + 1; j++) {
-					if (node[i][j] > node[i][k] + node[k][j]) {
-						node[i][j] = node[i][k] + node[k][j];
+					if (node[i][j] > node[i][k] + node[k][j]) { // 초기화된 값 > k를 거치는 값
+						node[i][j] = node[i][k] + node[k][j];   // 초기화된 값 = k를 거치는 값
 					}
 				}
 			}
@@ -40,7 +44,7 @@ public class Copied_Programmers_72413_FareForCarpooling {
 
 		int min = Integer.MAX_VALUE;
 		for (int i = 1; i < n + 1; i++) {
-			min = Math.min(min, node[s][i] + node[i][a] + node[i][b]);
+			min = Math.min(min, node[s][i] + node[i][a] + node[i][b]); // i -> 합승하는 위치
 		}
 		return min;
 	}
