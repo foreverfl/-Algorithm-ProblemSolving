@@ -1,4 +1,4 @@
-package BOJ_Copied;
+package BOJ;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,13 +6,13 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
-public class Copied_BOJ_01967_DiameterOfTree {
+public class BOJ_01167_DiameterOfTree {
 
-	static ArrayList<Node_01967> list[];
-	static boolean visited[];	
+	static ArrayList<Node_01167> list[];
+	static boolean visited[];
 	static int n;
 	static int max = 0, max_idx = 0;
-	
+
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st;
@@ -25,13 +25,21 @@ public class Copied_BOJ_01967_DiameterOfTree {
 			list[i] = new ArrayList<>();
 		}
 
-		for (int i = 0; i < n - 1; i++) {
+		for (int i = 0; i < n; i++) {
 			st = new StringTokenizer(br.readLine());
 			int parent = Integer.parseInt(st.nextToken());
-			int child = Integer.parseInt(st.nextToken());
-			int weight = Integer.parseInt(st.nextToken());
-			list[parent].add(new Node_01967(child, weight));
-			list[child].add(new Node_01967(parent, weight));
+
+			while (true) {
+				int child = Integer.parseInt(st.nextToken());
+				
+				if (child == -1)
+					break;
+				
+				int weight = Integer.parseInt(st.nextToken());
+
+				list[parent].add(new Node_01167(child, weight));
+				list[child].add(new Node_01167(parent, weight));
+			}
 		}
 
 		visited = new boolean[n + 1];
@@ -45,29 +53,27 @@ public class Copied_BOJ_01967_DiameterOfTree {
 
 	}
 
-	public static void dfs(int idx, int cnt) {
-		if (max < cnt) {
-			max = cnt;
+	public static void dfs(int idx, int weight) {
+		if (max < weight) {
+			max = weight;
 			max_idx = idx;
 		}
 
-		for (Node_01967 nxt : list[idx]) {
+		for (Node_01167 nxt : list[idx]) {
 			if (!visited[nxt.idx]) {
 				visited[nxt.idx] = true;
-				dfs(nxt.idx, cnt + nxt.cnt);
+				dfs(nxt.idx, weight + nxt.weight);
 			}
 		}
 
 	}
 }
 
-class Node_01967 {
-	int idx, cnt;
+class Node_01167 {
+	int idx, weight;
 
-	Node_01967(int idx, int cnt) {
+	Node_01167(int idx, int weight) {
 		this.idx = idx;
-		this.cnt = cnt;
+		this.weight = weight;
 	}
 }
-
-// reference: https://suhyeokeee.tistory.com/175
