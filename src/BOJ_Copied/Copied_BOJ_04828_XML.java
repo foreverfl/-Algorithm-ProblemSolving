@@ -1,4 +1,4 @@
-package BOJ;
+package BOJ_Copied;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -14,8 +14,8 @@ public class Copied_BOJ_04828_XML {
 
 		String str;
 		while ((str = br.readLine()) != null) {
-			CompletableFuture.completedFuture(str).thenApply(xml::removeEscape).thenApply(xml::removeHex)
-					.thenApply(xml::checkAndRemoveTag).thenApply(xml::checkPlainText).thenApply(s -> "valid")
+			CompletableFuture.completedFuture(str).thenApply(xml_04828::removeEscape).thenApply(xml_04828::removeHex)
+					.thenApply(xml_04828::checkAndRemoveTag).thenApply(xml_04828::checkPlainText).thenApply(s -> "valid")
 					.exceptionally(s -> "invalid").thenAccept(System.out::println);
 		}
 
@@ -24,7 +24,7 @@ public class Copied_BOJ_04828_XML {
 	}
 }
 
-class xml {
+class xml_04828 {
 	public static String removeEscape(String str) {
 		return str.replaceAll("(&amp;)|(&lt;)|(&gt;)", "");
 	}

@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Copied_BOJ_15649_NandM_1 {
+public class Copied_BOJ_15649_NAndM_1 {
 
 	public static int N;
 	public static int M;
