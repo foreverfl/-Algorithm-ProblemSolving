@@ -6,12 +6,11 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class BOJ_01759_MakingPassword {
+public class Copied_BOJ_01759_MakingPassword {
 
 	static int L, C;
 	static char[] arr;
 	static boolean[] visited;
-	static StringBuilder sb = new StringBuilder();
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -32,18 +31,25 @@ public class BOJ_01759_MakingPassword {
 
 		backtracking(0, 0);
 
-		System.out.println(sb.toString());
 	}
 
 	private static void backtracking(int depth, int idx) {
 		if (depth == L) {
+			int v = 0;
+			int cc = 0;
+			StringBuilder sb = new StringBuilder();
 			for (int i = 0; i < C; i++) {
 				if (visited[i]) {
 					sb.append(arr[i]);
+					if (arr[i] == 'a' || arr[i] == 'e' || arr[i] == 'i' || arr[i] == 'o' || arr[i] == 'u') {
+						v++;
+					} else {
+						cc++;
+					}
 				}
 			}
-			sb.append('\n');
-			return;
+			if (v >= 1 && cc >= 2)
+				System.out.println(sb.toString());
 		}
 
 		for (int i = idx; i < C; i++) {
@@ -56,3 +62,5 @@ public class BOJ_01759_MakingPassword {
 	}
 
 }
+
+// reference: https://velog.io/@ssojin/%EB%B0%B1%EC%A4%80-1759-%EC%95%94%ED%98%B8%EB%A7%8C%EB%93%A4%EA%B8%B0-Java
