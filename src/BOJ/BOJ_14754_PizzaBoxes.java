@@ -7,7 +7,7 @@ import java.util.StringTokenizer;
 
 public class BOJ_14754_PizzaBoxes {
 
-	static long[][] input, box;
+	static long[][] input, result;
 	static int n, m;
 
 	public static void main(String[] args) throws IOException {
@@ -19,7 +19,7 @@ public class BOJ_14754_PizzaBoxes {
 		m = Integer.parseInt(st.nextToken());
 
 		input = new long[n][m];
-		box = new long[n][m];
+		result = new long[n][m];
 
 		long total = 0;
 		for (int i = 0; i < n; i++) {
@@ -43,7 +43,7 @@ public class BOJ_14754_PizzaBoxes {
 					max_y = j;
 				}
 			}
-			box[max_x][max_y] = max;
+			result[max_x][max_y] = max;
 			max = Integer.MIN_VALUE;
 			max_x = 0;
 			max_y = 0;
@@ -58,7 +58,7 @@ public class BOJ_14754_PizzaBoxes {
 					max_y = i;
 				}
 			}
-			box[max_x][max_y] = max;
+			result[max_x][max_y] = max;
 			max = Integer.MIN_VALUE;
 			max_x = 0;
 			max_y = 0;
@@ -67,14 +67,12 @@ public class BOJ_14754_PizzaBoxes {
 		long remove = 0;
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < m; j++) {
-				remove += box[i][j];
+				remove += result[i][j];
 			}			
 		}
 		
 		System.out.println(total - remove);
 		
-		
-
 	}
 
 }

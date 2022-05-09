@@ -38,11 +38,8 @@ public class BOJ_01440_TimeMachine {
 						}
 					}
 
-					tmp_2 = (ArrayList<Integer>) list.clone();
-
 				}
 
-				tmp_1 = (ArrayList<Integer>) list.clone();
 			}
 		}
 
