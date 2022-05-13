@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class BOJ_09576_DistributingBooks {
+public class BOJ_11945_HotCarpBun {
 
 	static char[][] map;
 
