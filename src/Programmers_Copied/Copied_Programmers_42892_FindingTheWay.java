@@ -22,13 +22,13 @@ public class Copied_Programmers_42892_FindingTheWay {
 	static int idx;
 
 	public static int[][] solution(int[][] nodeinfo) {
-		// 노드를 입력받는다.
-		Node[] node = new Node[nodeinfo.length];
+
+		Node[] nodes = new Node[nodeinfo.length];
 		for (int i = 0; i < nodeinfo.length; i++) {
-			node[i] = new Node(nodeinfo[i][0], nodeinfo[i][1], i + 1, null, null);
+			nodes[i] = new Node(nodeinfo[i][0], nodeinfo[i][1], i + 1, null, null);
 		}
-		// y값 큰 순서대로, y값 같다면 x값 작은 순서대로 정렬
-		Arrays.sort(node, new Comparator<Node>() {
+
+		Arrays.sort(nodes, new Comparator<Node>() {
 			@Override
 			public int compare(Node n1, Node n2) {
 				if (n1.y == n2.y)
@@ -38,17 +38,17 @@ public class Copied_Programmers_42892_FindingTheWay {
 			}
 		});
 
-		// 트리를 만든다.
-		Node root = node[0];
-		for (int i = 1; i < node.length; i++) {
-			insertNode(root, node[i]);
+		// making a tree
+		Node root = nodes[0];
+		for (int i = 1; i < nodes.length; i++) {
+			insertNode(root, nodes[i]);
 		}
 
-		result = new int[2][nodeinfo.length];
+		result = new int[2][nodeinfo.length]; // 1 -> pre, 2 -> post
 		idx = 0;
-		preorder(root); // 전위 순회
-		idx = 0;
-		postorder(root); // 후위 순회
+		preorder(root);
+		idx = 0; // initialization
+		postorder(root);
 		return result;
 	}
 
