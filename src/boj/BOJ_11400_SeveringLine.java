@@ -7,17 +7,18 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.StringTokenizer;
 
-class Node {
-	int x;
-	int y;
-
-	Node(int x, int y) {
-		this.x = x;
-		this.y = y;
-	}
-}
-
 public class BOJ_11400_SeveringLine {
+
+	static class Node {
+		int x;
+		int y;
+
+		Node(int x, int y) {
+			this.x = x;
+			this.y = y;
+		}
+	}
+
 	static int count = 1;
 	static int[] order;
 	static ArrayList<Node> ans;
