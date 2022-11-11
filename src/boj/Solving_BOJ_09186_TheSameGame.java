@@ -10,7 +10,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-public class BOJ_09186_TheSameGame {
+public class Solving_BOJ_09186_TheSameGame {
 
 	private static class Cluster implements Comparable<Cluster> {
 		private int x;
