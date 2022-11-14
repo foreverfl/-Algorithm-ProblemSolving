@@ -1,4 +1,4 @@
-package boj;
+package boj_Copied;
 
 import java.io.BufferedReader;
 import java.io.IOException;
