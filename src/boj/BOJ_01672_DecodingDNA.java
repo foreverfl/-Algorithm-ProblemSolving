@@ -1,34 +1,26 @@
 package boj;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
 
-public class Solving_BOJ_01672_DecodingDNA {
+public class BOJ_01672_DecodingDNA {
 
-	static int N;
-	static String str;
-	static char A, B, tmp;
-	
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		N = Integer.parseInt(br.readLine());
-		str = br.readLine();
+		int N = Integer.parseInt(br.readLine());
+		String str = br.readLine();
 
-		int repeat = N - 1;
-		while (repeat-- > 0) {
-			A = str.charAt(str.length() - 1);
-			B = str.charAt(str.length() - 2);
-			tmp = decode(A, B);
-			str = str.substring(0, str.length() - 2) + tmp;
+		char before = ' ', after = ' ';
+		after = str.charAt(str.length() - 1);
+		for (int i = N - 1; i >= 0; i--) {
+			before = str.charAt(i);
+			after = decode(before, after);
+
 		}
 
-		bw.write(str + ' ');
-		bw.flush();
-		bw.close();
+		System.out.print(after);
+
 	}
 
 	private static char decode(char A, char B) {
