@@ -1,4 +1,4 @@
-package boj;
+package boj_Copied;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -38,7 +38,6 @@ public class Copied_BOJ_14503_RobotCleaner {
 		clean(r, c, d);
 
 		bw.write(cnt + "\n");
-		br.close();
 		bw.flush();
 		bw.close();
 	}
@@ -54,12 +53,14 @@ public class Copied_BOJ_14503_RobotCleaner {
 		boolean flag = false;
 		int origin = direction;
 		for (int i = 0; i < 4; i++) {
+			// 왼쪽 방향부터 차례대로 탐색
 			int next_d = (direction + 3) % 4;
 			int next_r = row + dr[next_d];
 			int next_c = col + dc[next_d];
 
 			if (next_r > 0 && next_c > 0 && next_r < N && next_c < M) {
-				if (map[next_r][next_c] == 0) { // 아직 청소하지 않은 공간이라면
+				// 아직 청소하지 않은 공간이라면
+				if (map[next_r][next_c] == 0) {
 					clean(next_r, next_c, next_d);
 					flag = true;
 					break;
@@ -68,7 +69,7 @@ public class Copied_BOJ_14503_RobotCleaner {
 			direction = (direction + 3) % 4;
 		}
 
-		// 네 방향 모두 청소가 되어있거나 벽인 경우
+		// 네 방향 모두 청소가 되어있거나 벽인 경우 -> 후진
 		if (!flag) {
 			int next_d = (origin + 2) % 4;
 			int next_br = row + dr[next_d];
@@ -76,7 +77,8 @@ public class Copied_BOJ_14503_RobotCleaner {
 
 			if (next_br > 0 && next_bc > 0 && next_br < N && next_bc < M) {
 				if (map[next_br][next_bc] != 1) {
-					clean(next_br, next_bc, origin); // 바라보는 방향 유지한 채 후진
+					// 바라보는 방향 유지한 채 후진
+					clean(next_br, next_bc, origin);
 				}
 			}
 		}
