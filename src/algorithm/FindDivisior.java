@@ -20,4 +20,8 @@ public class FindDivisior {
 
 		return list.size();
 	}
+
+	public static void main(String... args) {
+		System.out.println(findDivisor(10));
+	}
 }
