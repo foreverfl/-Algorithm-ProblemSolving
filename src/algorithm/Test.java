@@ -1,9 +1,11 @@
 package algorithm;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
 public class Test {
-	
+	public static void main(String[] args) {
+		for (int i = 1; i <= 10; i++) {
+			System.out.print(i & 1);
+			System.out.println(" " + Integer.toBinaryString(i & 1));
+		}
+	}
+
 }

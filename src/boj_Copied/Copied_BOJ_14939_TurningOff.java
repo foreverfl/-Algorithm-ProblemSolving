@@ -19,7 +19,7 @@ public class Copied_BOJ_14939_TurningOff {
 
 		char[][] tmp = new char[10][10];
 
-		for (int c = 0; c < (1 << 10); c++) { // checking all cases
+		for (int c = 0; c < (1 << 10); c++) { // 2의 10승
 			deepCopy(map, tmp);
 			
 			int cnt = 0;
@@ -34,7 +34,7 @@ public class Copied_BOJ_14939_TurningOff {
 		System.out.println(answer == Integer.MAX_VALUE ? -1 : answer);
 	}
 
-	private static boolean isAllOff(char[][] tmp) { // checking the last line
+	private static boolean isAllOff(char[][] tmp) { // 마지막 줄을 체크한다.
 		boolean flag = true;
 		for (int x = 0; x < 10; x++) {
 			if (tmp[9][x] == 'O') {
@@ -46,9 +46,9 @@ public class Copied_BOJ_14939_TurningOff {
 	}
 
 	private static int simulation(char[][] tmp, int c, int cnt) {
-		for (int x = 0; x < 10; x++) { // checking the first line
-			if ((c & (1 << x)) != 0) { // The first line itself is pushed 
-				lightSwitch(tmp, x, 0);
+		for (int x = 0; x < 10; x++) { // 첫 번째 줄을 체크한다.
+			if ((c & (1 << x)) != 0) { // x가 눌려있지 않다면
+				lightSwitch(tmp, x, 0); // x를 누른다.
 				cnt++;
 			}
 		}

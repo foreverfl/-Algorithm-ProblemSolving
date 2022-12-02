@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FindDivisior {
-	public static int findDivisor(int num) {
+	private static int findDivisor(int num) {
 		int sqrt = (int) Math.sqrt(num);
 		List<Integer> list = new ArrayList<>();
 
@@ -22,6 +22,6 @@ public class FindDivisior {
 	}
 
 	public static void main(String... args) {
-		System.out.println(findDivisor(10));
+		System.out.println(findDivisor(100));
 	}
 }
