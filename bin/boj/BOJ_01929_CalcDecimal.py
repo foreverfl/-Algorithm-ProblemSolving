@@ -16,6 +16,13 @@ def sieve_of_eratosthenes(n):
 
     return primes
 
-# 사용 예시
-primes = sieve_of_eratosthenes(30)
-print(primes)
+
+M, N = map(int, input().split())
+decimals = sieve_of_eratosthenes(N)
+ans = list()
+for i in range(len(decimals)):
+    if decimals[i] >= M and decimals[i] <= N:
+        ans.append(decimals[i])
+
+for num in ans:
+    print(num)

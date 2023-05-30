@@ -1,5 +1,5 @@
 def sieve_of_eratosthenes(n):
-    is_prime = [True] * (n+1)
+    is_prime = [True] * (n + 1)
     is_prime[0] = is_prime[1] = False
 
     p = 2
