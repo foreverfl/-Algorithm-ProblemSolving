@@ -1,10 +1,10 @@
-package boj;
+package boj_Copied;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class BOJ_21758_ObtainingHoney {
+public class Copied_BOJ_21758_ObtainingHoney {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
