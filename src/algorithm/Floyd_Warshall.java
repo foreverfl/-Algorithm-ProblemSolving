@@ -2,41 +2,52 @@ package algorithm;
 
 public class Floyd_Warshall {
 	
-	public static int floyd_warshall(int N, int[][] road, int K) {
-		int dist[][] = new int[N + 1][N + 1];
-		for (int i = 1; i <= N; i++) {
-			for (int j = 1; j <= N; j++) {
-				if (i == j) {
-					dist[i][j] = 0;
-					continue;
-				}
-				dist[i][j] = 500000;
-			}
-		}
+	public static final int INF = 9999999; // 무한대를 나타내는 값
 
-		for (int i = 0; i < road.length; i++) {
-			int a = road[i][0];
-			int b = road[i][1];
-			int cost = road[i][2];
-			dist[a][b] = Math.min(dist[a][b], cost);
-			dist[b][a] = Math.min(dist[b][a], cost);
-		}
+    public static void floydWarshall(int[][] graph, int V) {
+        int[][] dist = new int[V][V];
 
-		for (int k = 1; k <= N; k++) {
-			for (int i = 1; i <= N; i++) {
-				for (int j = 1; j <= N; j++) {
-					dist[i][j] = Math.min(dist[i][j], dist[i][k] + dist[k][j]);
-				}
-			}
-		}
+        // 최단 거리 배열을 초기화합니다.
+        for (int i = 0; i < V; i++) {
+            for (int j = 0; j < V; j++) {
+                dist[i][j] = graph[i][j];
+            }
+        }
 
-		int answer = 0;
-		for (int i = 1; i <= N; i++) {
-			if (dist[1][i] <= K) {
-				answer++;
-			}
-		}
+        // 중간 정점을 거쳐가는 모든 경로를 고려하여 최단 거리를 업데이트합니다.
+        for (int k = 0; k < V; k++) {
+            for (int i = 0; i < V; i++) {
+                for (int j = 0; j < V; j++) {
+                    if (dist[i][k] + dist[k][j] < dist[i][j]) {
+                        dist[i][j] = dist[i][k] + dist[k][j];
+                    }
+                }
+            }
+        }
 
-		return answer;
-	}
+        // 최단 거리 출력
+        for (int i = 0; i < V; i++) {
+            for (int j = 0; j < V; j++) {
+                if (dist[i][j] == INF) {
+                    System.out.print("INF ");
+                } else {
+                    System.out.print(dist[i][j] + " ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+        int V = 4; // 정점의 개수
+
+        int[][] graph = {
+            {0, 5, INF, 8},
+            {7, 0, 9, INF},
+            {2, INF, 0, 4},
+            {INF, INF, 3, 0}
+        };
+
+        floydWarshall(graph, V);
+    }
 }
