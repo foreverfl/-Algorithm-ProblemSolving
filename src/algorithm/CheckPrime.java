@@ -1,6 +1,6 @@
 package algorithm;
 
-public class CheckPrime_2 {
+public class CheckPrime {
 	private static boolean checkPrime(long num) {
 		if (num <= 1)
 			return false;

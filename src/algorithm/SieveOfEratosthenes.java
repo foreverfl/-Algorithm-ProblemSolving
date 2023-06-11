@@ -3,7 +3,7 @@ package algorithm;
 import java.util.Arrays;
 
 // 소수 판별(에라스토테네스의 체)
-public class CheckPrime_1 {
+public class SieveOfEratosthenes {
 
 	private static boolean[] isPrime;
 
