@@ -1,19 +1,12 @@
 package algorithm;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
 public class RotateArray {
-	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		int N = Integer.parseInt(br.readLine());
-
+	public static void main(String[] args) {
 		int idx = 1;
-		int[][] arr = new int[N][N];
+		int[][] arr = new int[7][7];
 
 		int start = 0;
-		int end = N;
+		int end = arr.length;
 		while (true) {
 			for (int i = start; i < end; i++) {
 				arr[start][i] = idx++;
@@ -33,9 +26,9 @@ public class RotateArray {
 				break;
 		}
 
-		for (int i = 0; i < N; i++) {
-			for (int j = 0; j < N; j++) {
-				System.out.print(arr[i][j] + " ");
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr[i].length; j++) {
+				System.out.printf("%3d ", arr[i][j]);
 			}
 			System.out.println();
 		}
