@@ -13,6 +13,7 @@ def divide_and_conquer(arr, row, col, size):
     if isSame:
         if first_color == 0:
             cnt_0 += 1
+
         else:
             cnt_1 += 1
     else:
