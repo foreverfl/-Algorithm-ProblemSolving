@@ -3,7 +3,7 @@ package programmers;
 import java.util.Arrays;
 import java.util.PriorityQueue;
 
-public class Progammers_12927_Overwork{
+public class Programmers_12927_Overwork{
     public static void main(String[] args) {
         System.out.println(solution(4, new int[]{4, 3, 3}));
         System.out.println(solution(1, new int[]{2, 1, 2}));
