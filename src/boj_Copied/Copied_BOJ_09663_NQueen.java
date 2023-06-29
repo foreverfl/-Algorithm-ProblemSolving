@@ -28,20 +28,21 @@ public class Copied_BOJ_09663_NQueen {
 		}
 
 		for (int i = 0; i < N; i++) {
-			arr[depth] = i;
+			arr[depth] = i; // depth행, i열
 			if (possibility(depth))
 				backtracking(depth + 1);
 		}
 
 	}
 
+	// 이전의 열에 퀸이 배치되었음을 확인하는 메서드
 	private static boolean possibility(int col) {
 
 		for (int i = 0; i < col; i++) {
-			if (arr[col] == arr[i]) // checking same row
+			if (arr[col] == arr[i])
 				return false;
 
-			else if (Math.abs(col - i) == Math.abs(arr[col] - arr[i])) // checking diagonal line
+			else if (Math.abs(col - i) == Math.abs(arr[col] - arr[i]))
 				return false;
 
 		}

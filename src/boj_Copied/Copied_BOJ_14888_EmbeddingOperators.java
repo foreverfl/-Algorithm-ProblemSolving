@@ -31,14 +31,14 @@ public class Copied_BOJ_14888_EmbeddingOperators {
 			operator[i] = Integer.parseInt(st.nextToken());
 		}
 
-		dfs(operand[0], 1);
+		backtrack(operand[0], 1);
 
 		System.out.println(MAX);
 		System.out.println(MIN);
 
 	}
 
-	public static void dfs(int num, int idx) {
+	public static void backtrack(int num, int idx) {
 		if (idx == N) {
 			MAX = Math.max(MAX, num);
 			MIN = Math.min(MIN, num);
@@ -51,20 +51,14 @@ public class Copied_BOJ_14888_EmbeddingOperators {
 
 				operator[i]--;
 
-				switch (i) {
-
-				case 0:
-					dfs(num + operand[idx], idx + 1);
-					break;
-				case 1:
-					dfs(num - operand[idx], idx + 1);
-					break;
-				case 2:
-					dfs(num * operand[idx], idx + 1);
-					break;
-				case 3:
-					dfs(num / operand[idx], idx + 1);
-					break;
+				if (i == 0) {
+					backtrack(num + operand[idx], idx + 1);
+				} else if (i == 1) {
+					backtrack(num - operand[idx], idx + 1);
+				} else if (i == 2) {
+					backtrack(num * operand[idx], idx + 1);
+				} else if (i == 3) {
+					backtrack(num / operand[idx], idx + 1);
 				}
 
 				operator[i]++;
