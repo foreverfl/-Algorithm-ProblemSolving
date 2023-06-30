@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Copied_Programmers_43238_Immigration",
+      "request": "launch",
+      "mainClass": "programmers.Copied_Programmers_43238_Immigration",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Programmers_43238_Immigration",
+      "request": "launch",
+      "mainClass": "programmers.Programmers_43238_Immigration",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
       "name": "Copied_Programmers_67259_ConstructingTrack",
       "request": "launch",
       "mainClass": "programmers.Copied_Programmers_67259_ConstructingTrack",
