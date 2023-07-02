@@ -6,6 +6,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Programmers_60059_LockAndKey",
+      "request": "launch",
+      "mainClass": "programmers.Programmers_60059_LockAndKey",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Copied_Programmers_17678_ShuttleBus",
+      "request": "launch",
+      "mainClass": "programmers.Copied_Programmers_17678_ShuttleBus",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Programmers_17678_ShuttleBus",
+      "request": "launch",
+      "mainClass": "programmers.Programmers_17678_ShuttleBus",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
       "name": "Copied_Programmers_43238_Immigration",
       "request": "launch",
       "mainClass": "programmers.Copied_Programmers_43238_Immigration",
