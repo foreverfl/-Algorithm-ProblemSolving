@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Programmers_181873_CharToUpperCase",
+      "request": "launch",
+      "mainClass": "programmers.Programmers_181873_CharToUpperCase",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
       "name": "Programmers_60059_LockAndKey",
       "request": "launch",
       "mainClass": "programmers.Programmers_60059_LockAndKey",
