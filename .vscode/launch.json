@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Copied_Programmers_49191_Rank",
+      "request": "launch",
+      "mainClass": "programmers.Copied_Programmers_49191_Rank",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Programmers_68646_PoppingBalloons",
+      "request": "launch",
+      "mainClass": "programmers.Programmers_68646_PoppingBalloons",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
       "name": "Programmers_181873_CharToUpperCase",
       "request": "launch",
       "mainClass": "programmers.Programmers_181873_CharToUpperCase",
