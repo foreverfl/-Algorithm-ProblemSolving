@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Programmers_60061_InstallationOfColumnsAndBeams",
+      "request": "launch",
+      "mainClass": "programmers.Programmers_60061_InstallationOfColumnsAndBeams",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
       "name": "Copied_Programmers_49191_Rank",
       "request": "launch",
       "mainClass": "programmers.Copied_Programmers_49191_Rank",
