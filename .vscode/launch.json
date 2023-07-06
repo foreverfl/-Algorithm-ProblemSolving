@@ -6,6 +6,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Copied_Programmers_72414_InsertingAd",
+      "request": "launch",
+      "mainClass": "programmers_Copied.Copied_Programmers_72414_InsertingAd",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Programmers_72414_InsertingAd",
+      "request": "launch",
+      "mainClass": "programmers.Programmers_72414_InsertingAd",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Programmers_42891_EatingShowLive",
+      "request": "launch",
+      "mainClass": "programmers.Programmers_42891_EatingShowLive",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
       "name": "Programmers_60061_InstallationOfColumnsAndBeams",
       "request": "launch",
       "mainClass": "programmers.Programmers_60061_InstallationOfColumnsAndBeams",

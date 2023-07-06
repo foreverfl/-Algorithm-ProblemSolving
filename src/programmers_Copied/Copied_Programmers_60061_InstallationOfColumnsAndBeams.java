@@ -27,7 +27,7 @@ public class Copied_Programmers_60061_InstallationOfColumnsAndBeams {
                 }
                 if (itemToRemove != null) {
                     answer.remove(itemToRemove);
-                    if (!check(answer)) {
+                    if (!check(answer)) { // 조건을 만족하지 않으면 무시(다시 추가)
                         answer.add(itemToRemove);
                     }
                 }
