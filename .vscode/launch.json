@@ -6,6 +6,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Programmers_150365_EscapingTheMaze",
+      "request": "launch",
+      "mainClass": "programmers.Programmers_150365_EscapingTheMaze",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Copied_Programmers_150367_BinaryTree",
+      "request": "launch",
+      "mainClass": "programmers.Copied_Programmers_150367_BinaryTree",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Programmers_150367_BinaryTree",
+      "request": "launch",
+      "mainClass": "programmers.Programmers_150367_BinaryTree",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
       "name": "Copied_Programmers_72414_InsertingAd",
       "request": "launch",
       "mainClass": "programmers_Copied.Copied_Programmers_72414_InsertingAd",
