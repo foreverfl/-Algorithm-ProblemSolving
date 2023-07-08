@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Programmers_17685_Autocomplete",
+      "request": "launch",
+      "mainClass": "programmers.Programmers_17685_Autocomplete",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "TrieAlgorithm",
+      "request": "launch",
+      "mainClass": "algorithm.TrieAlgorithm",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
       "name": "Programmers_150365_EscapingTheMaze",
       "request": "launch",
       "mainClass": "programmers.Programmers_150365_EscapingTheMaze",
