@@ -6,6 +6,34 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Copied_Programmers_42894_BlockGame",
+      "request": "launch",
+      "mainClass": "programmers.Copied_Programmers_42894_BlockGame",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Programmers_42894_BlockGame",
+      "request": "launch",
+      "mainClass": "programmers.Programmers_42894_BlockGame",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Copied_Programmers_118668_StudyingAlgorithm",
+      "request": "launch",
+      "mainClass": "programmers.Copied_Programmers_118668_StudyingAlgorithm",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Programmers_118668_StudyingAlgorithm",
+      "request": "launch",
+      "mainClass": "programmers.Programmers_118668_StudyingAlgorithm",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
       "name": "Copied_Programmers_60062_ExteriorWallInspection",
       "request": "launch",
       "mainClass": "programmers_Copied.Copied_Programmers_60062_ExteriorWallInspection",
