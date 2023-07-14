@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "UnionFindExample",
+      "request": "launch",
+      "mainClass": "algorithm.UnionFindExample",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Programmers_150366_MergingTable",
+      "request": "launch",
+      "mainClass": "programmers.Programmers_150366_MergingTable",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
       "name": "Copied_Programmers_42894_BlockGame",
       "request": "launch",
       "mainClass": "programmers.Copied_Programmers_42894_BlockGame",
