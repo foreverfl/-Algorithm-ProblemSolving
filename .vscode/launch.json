@@ -6,6 +6,76 @@
   "configurations": [
     {
       "type": "java",
+      "name": "_7258_ScoutTheBarracks",
+      "request": "launch",
+      "mainClass": "CodingMasters._7258_ScoutTheBarracks",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7253_CousinNumber",
+      "request": "launch",
+      "mainClass": "CodingMasters._7253_CousinNumber",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7255_NutritionScore",
+      "request": "launch",
+      "mainClass": "CodingMasters._7255_NutritionScore",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_07213_ThaiTaxi",
+      "request": "launch",
+      "mainClass": "CodingMasters._07213_ThaiTaxi",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7181_GCD",
+      "request": "launch",
+      "mainClass": "CodingMasters._7181_GCD",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7164_ArithmeticProgression",
+      "request": "launch",
+      "mainClass": "CodingMasters._7164_ArithmeticProgression",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7163_FindingPassword",
+      "request": "launch",
+      "mainClass": "CodingMasters._7163_FindingPassword",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7166_ASCII",
+      "request": "launch",
+      "mainClass": "CodingMasters._7166_ASCII",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Copied_Programmers_60060_SearchingArticle",
+      "request": "launch",
+      "mainClass": "programmers.Copied_Programmers_60060_SearchingArticle",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Programmers_60060_SearchingArticle",
+      "request": "launch",
+      "mainClass": "programmers.Programmers_60060_SearchingArticle",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
       "name": "UnionFindExample",
       "request": "launch",
       "mainClass": "algorithm.UnionFindExample",
