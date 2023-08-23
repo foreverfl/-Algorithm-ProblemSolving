@@ -6,6 +6,104 @@
   "configurations": [
     {
       "type": "java",
+      "name": "_7262_MakeBoomerang",
+      "request": "launch",
+      "mainClass": "CodingMasters._7262_MakeBoomerang",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7184_FindingElement",
+      "request": "launch",
+      "mainClass": "CodingMasters._7184_FindingElement",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7183_FindMyName",
+      "request": "launch",
+      "mainClass": "CodingMasters._7183_FindMyName",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7180_AreaOfCircle",
+      "request": "launch",
+      "mainClass": "CodingMasters._7180_AreaOfCircle",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7175_IQKing",
+      "request": "launch",
+      "mainClass": "CodingMasters._7175_IQKing",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7174_Coupon",
+      "request": "launch",
+      "mainClass": "CodingMasters._7174_Coupon",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7173_Limbo",
+      "request": "launch",
+      "mainClass": "CodingMasters._7173_Limbo",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7172_Amnesia",
+      "request": "launch",
+      "mainClass": "CodingMasters._7172_Amnesia",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7171_TriangleCondition",
+      "request": "launch",
+      "mainClass": "CodingMasters._7171_TriangleCondition",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7170_ChildrenHeight",
+      "request": "launch",
+      "mainClass": "CodingMasters._7170_ChildrenHeight",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7169_KoreanCow",
+      "request": "launch",
+      "mainClass": "CodingMasters._7169_KoreanCow",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7168_BiggerRemains",
+      "request": "launch",
+      "mainClass": "CodingMasters._7168_BiggerRemains",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7167_MakeID",
+      "request": "launch",
+      "mainClass": "CodingMasters._7167_MakeID",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7165_OctalHexadecimal",
+      "request": "launch",
+      "mainClass": "CodingMasters._7165_OctalHexadecimal",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
       "name": "_7258_ScoutTheBarracks",
       "request": "launch",
       "mainClass": "CodingMasters._7258_ScoutTheBarracks",
