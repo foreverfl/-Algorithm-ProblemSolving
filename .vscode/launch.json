@@ -6,6 +6,55 @@
   "configurations": [
     {
       "type": "java",
+      "name": "_7955_Quaternion",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7955_Quaternion",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Stream_collect",
+      "request": "launch",
+      "mainClass": "Java.Stream_collect",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "String_repeat",
+      "request": "launch",
+      "mainClass": "Java.String_repeat",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Stream_mapToObj",
+      "request": "launch",
+      "mainClass": "Java.Stream_mapToObj",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7865_Chattering",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7865_Chattering",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Stream_mapToInt",
+      "request": "launch",
+      "mainClass": "Java.Stream_mapToInt",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7868_CompressedSequence",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7868_CompressedSequence",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
       "name": "_7262_MakeBoomerang",
       "request": "launch",
       "mainClass": "CodingMasters._7262_MakeBoomerang",

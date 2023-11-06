@@ -1,13 +1,15 @@
-package CodingMasters;
+package CodingMasters_1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class _7179_Divide16 {
+public class _7168_BiggerRemains {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
-        System.out.println(N / 16);
+        int A = N % 5;
+        int B = N % 7;
+        System.out.println(A > B ? A : B);
     }
 }
