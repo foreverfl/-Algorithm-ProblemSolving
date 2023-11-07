@@ -6,6 +6,69 @@
   "configurations": [
     {
       "type": "java",
+      "name": "_7944_SideGigs",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7944_SideGigs",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7872_Cogwheel",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7872_Cogwheel",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7866_TrainAndFly",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7866_TrainAndFly",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7882_Wand",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7882_Wand",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "String_join",
+      "request": "launch",
+      "mainClass": "Java.String_join",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Character_getNumericValue",
+      "request": "launch",
+      "mainClass": "Java.Character_getNumericValue",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7871_RegistrationNumber",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7871_RegistrationNumber",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7867_pangram",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7867_pangram",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7869_GeomanticTheory",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7869_GeomanticTheory",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
       "name": "_7955_Quaternion",
       "request": "launch",
       "mainClass": "CodingMasters_2._7955_Quaternion",
