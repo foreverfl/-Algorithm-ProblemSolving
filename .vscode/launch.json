@@ -6,6 +6,34 @@
   "configurations": [
     {
       "type": "java",
+      "name": "FastExponentiation",
+      "request": "launch",
+      "mainClass": "algorithm.FastExponentiation",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7937_ShufflingCards",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7937_ShufflingCards",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7947_ChristmasPresent",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7947_ChristmasPresent",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7963_Doubles",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7963_Doubles",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
       "name": "_7944_SideGigs",
       "request": "launch",
       "mainClass": "CodingMasters_2._7944_SideGigs",
