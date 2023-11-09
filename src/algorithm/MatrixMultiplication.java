@@ -1,33 +1,38 @@
 package algorithm;
 
 public class MatrixMultiplication {
+    public static final long MOD = 1000000007;
+
     public static void main(String[] args) {
-        int[][] matrix1 = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
-        int[][] matrix2 = { { 10, 11, 12 }, { 13, 14, 15 }, { 16, 17, 18 } };
+        long[][] m1 = { { 1, 2 }, { 3, 4 } };
+        long[][] m2 = { { 2, 0 }, { 1, 2 } };
 
-        int[][] result = multiplyMatrices(matrix1, matrix2);
+        long[][] result = matrixMultiply(m1, m2);
 
-        // 결과 행렬 출력
-        for (int i = 0; i < result.length; i++) {
-            for (int j = 0; j < result[0].length; j++) {
-                System.out.print(result[i][j] + " ");
-            }
-            System.out.println();
-        }
+        System.out.println("Result:");
+        printMatrix(result);
     }
 
-    public static int[][] multiplyMatrices(int[][] matrix1, int[][] matrix2) {
-        int n = matrix1.length;
-        int[][] result = new int[n][n];
-
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                for (int k = 0; k < n; k++) {
-                    result[i][j] += matrix1[i][k] * matrix2[k][j];
+    public static long[][] matrixMultiply(long[][] m1, long[][] m2) {
+        long[][] result = new long[2][2];
+        for (int i = 0; i < 2; i++) { // result 행
+            for (int j = 0; j < 2; j++) { // result 열
+                result[i][j] = 0;
+                for (int k = 0; k < 2; k++) {
+                    long multiplication = m1[i][k] * m2[k][j];
+                    result[i][j] = (result[i][j] + multiplication) % MOD;
                 }
             }
         }
-
         return result;
+    }
+
+    public static void printMatrix(long[][] matrix) {
+        for (long[] row : matrix) {
+            for (long value : row) {
+                System.out.print(value + " ");
+            }
+            System.out.println();
+        }
     }
 }

@@ -6,6 +6,160 @@
   "configurations": [
     {
       "type": "java",
+      "name": "_7877_Gamble",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7877_Gamble",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "String_format",
+      "request": "launch",
+      "mainClass": "Java.String_format",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7879_GrayScale",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7879_GrayScale",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7880_OperatingMax",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7880_OperatingMax",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Arrays_deepEquals",
+      "request": "launch",
+      "mainClass": "Java.Arrays_deepEquals",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7881_AppreciateAPainting",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7881_AppreciateAPainting",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "tmp",
+      "request": "launch",
+      "mainClass": "CodingMasters_2.tmp",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7883_DividingPseudoPrime",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7883_DividingPseudoPrime",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Arrays_equals",
+      "request": "launch",
+      "mainClass": "Java.Arrays_equals",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7884_FallenNumber",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7884_FallenNumber",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "OptionalInt_getAsInt",
+      "request": "launch",
+      "mainClass": "Java.OptionalInt_getAsInt",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7875_Present",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7875_Present",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7876_TrackingDirection",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7876_TrackingDirection",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7874_GroupID",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7874_GroupID",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7873_InputtingPhoneNumber",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7873_InputtingPhoneNumber",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "LocalDate_of",
+      "request": "launch",
+      "mainClass": "Java.LocalDate_of",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7870_ThreeColorInk",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7870_ThreeColorInk",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7952_WordChain",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7952_WordChain",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7938_NightBus",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7938_NightBus",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "MatrixExponentiation",
+      "request": "launch",
+      "mainClass": "algorithm.MatrixExponentiation",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7936_mould",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7936_mould",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7935_CuttingNetOfACube",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7935_CuttingNetOfACube",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
       "name": "FastExponentiation",
       "request": "launch",
       "mainClass": "algorithm.FastExponentiation",
