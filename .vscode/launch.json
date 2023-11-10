@@ -6,6 +6,62 @@
   "configurations": [
     {
       "type": "java",
+      "name": "_7960_ExploringSpace",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7960_ExploringSpace",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Solving_7959_KingOfElections",
+      "request": "launch",
+      "mainClass": "CodingMasters_2.Solving_7959_KingOfElections",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7959_KingOfElections",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7959_KingOfElections",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7956_Pruning",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7956_Pruning",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7957_Break",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7957_Break",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Comparable_compareTo",
+      "request": "launch",
+      "mainClass": "Java.Comparable_compareTo",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Comparator_comparingInt",
+      "request": "launch",
+      "mainClass": "Java.Comparator_comparingInt",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "MinimumSpanningTree",
+      "request": "launch",
+      "mainClass": "algorithm.MinimumSpanningTree",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
       "name": "_7877_Gamble",
       "request": "launch",
       "mainClass": "CodingMasters_2._7877_Gamble",
