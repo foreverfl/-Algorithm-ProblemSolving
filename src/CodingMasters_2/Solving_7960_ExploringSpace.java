@@ -8,7 +8,7 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
-public class _7960_ExploringSpace {
+public class Solving_7960_ExploringSpace {
 
     static class Edge implements Comparable<Edge> {
 

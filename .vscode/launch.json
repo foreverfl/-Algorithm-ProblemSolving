@@ -6,6 +6,55 @@
   "configurations": [
     {
       "type": "java",
+      "name": "_7911_HoneyFruit",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7911_HoneyFruit",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7906_ChickenTreeAndFence",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7906_ChickenTreeAndFence",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7887_TakeARound",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7887_TakeARound",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7886_GoodArray",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7886_GoodArray",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7885_RightAngledTriangle",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7885_RightAngledTriangle",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7878_Mukjjibba",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7878_Mukjjibba",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7945_CountingTheNumberOfToutes",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7945_CountingTheNumberOfToutes",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
       "name": "_7960_ExploringSpace",
       "request": "launch",
       "mainClass": "CodingMasters_2._7960_ExploringSpace",
