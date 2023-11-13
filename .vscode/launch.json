@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "_7964_CyclicPermutation",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7964_CyclicPermutation",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
       "name": "_7889_OneDimensionalIsland",
       "request": "launch",
       "mainClass": "CodingMasters_2._7889_OneDimensionalIsland",
