@@ -23,18 +23,18 @@ public class Dijkstra_LinkedList {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int T = Integer.parseInt(br.readLine());
-        while(T-- > 0) {
+        while (T-- > 0) {
             String[] tmp = br.readLine().split(" ");
             int n = Integer.parseInt(tmp[0]);
             int d = Integer.parseInt(tmp[1]);
             int c = Integer.parseInt(tmp[2]);
 
             List<List<Edge>> graph = new ArrayList<>();
-            for(int i = 0; i < n + 1; i++) {
+            for (int i = 0; i < n + 1; i++) {
                 graph.add(new ArrayList<>());
             }
 
-            for(int i = 0; i < d; i++) {
+            for (int i = 0; i < d; i++) {
                 tmp = br.readLine().split(" ");
                 int a = Integer.parseInt(tmp[0]);
                 int b = Integer.parseInt(tmp[1]);
@@ -45,11 +45,11 @@ public class Dijkstra_LinkedList {
             int[] dist = dijkstra(graph, c, n);
             int cnt = 0;
             int time = -1;
-            for(int i = 0; i < n + 1; i++) {
-                if(dist[i] != Integer.MAX_VALUE) {
+            for (int i = 0; i < n + 1; i++) {
+                if (dist[i] != Integer.MAX_VALUE) {
                     cnt++;
                     time = Math.max(time, dist[i]);
-                }                
+                }
             }
             System.out.println(cnt + " " + time);
         }
@@ -69,10 +69,11 @@ public class Dijkstra_LinkedList {
             int vertex = current.destination;
 
             for (Edge neighbor : graph.get(vertex)) {
-                int newDistance = distance[vertex] + neighbor.weight;
-                if (newDistance < distance[neighbor.destination]) {
-                    distance[neighbor.destination] = newDistance;
-                    pq.offer(new Edge(neighbor.destination, newDistance));
+                int newDistance = distance[vertex] + neighbor.weight; // 새로운 거리 = 현재까지의 거리 + 이웃과의 거리
+                if (newDistance < distance[neighbor.destination]) { // '새로운 거리 < 기존의 이웃에서 목적지로 가는 거리'
+                    distance[neighbor.destination] = newDistance; // '이웃에서 목적지로 가는 거리'를 새로운 거리로 갱신
+                    pq.offer(new Edge(neighbor.destination, newDistance)); // '이웃의 목적지'와 '이웃까지 도달하는데 필요한 거리'를
+                                                                           // PriorityQeue에 넣어서 재탐색
                 }
             }
         }

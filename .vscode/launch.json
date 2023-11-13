@@ -6,6 +6,76 @@
   "configurations": [
     {
       "type": "java",
+      "name": "_7889_OneDimensionalIsland",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7889_OneDimensionalIsland",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7892_DividingLand",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7892_DividingLand",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7890_ChaningPositionOfKnight",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7890_ChaningPositionOfKnight",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7898_NIMBY",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7898_NIMBY",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7894_AntiMultiplyArray",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7894_AntiMultiplyArray",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7893_Submatrix",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7893_Submatrix",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7914_MakingTriangle",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7914_MakingTriangle",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7918_CommutingTime",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7918_CommutingTime",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7923_TrailingZero2",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7923_TrailingZero2",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7922_TrailingZero1",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7922_TrailingZero1",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
       "name": "_7911_HoneyFruit",
       "request": "launch",
       "mainClass": "CodingMasters_2._7911_HoneyFruit",
