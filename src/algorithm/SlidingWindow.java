@@ -2,39 +2,27 @@ package algorithm;
 
 public class SlidingWindow {
     public static void main(String[] args) {
-        int[] nums = {1, 4, 2, 10, 2, 3, 1, 0, 20};
-        int target = 15;
-
-        int[] subarrayIndices = findSubarraySum(nums, target);
-
-        if (subarrayIndices != null) {
-            int start = subarrayIndices[0];
-            int end = subarrayIndices[1];
-            System.out.println("연속된 부분 배열의 합이 목표값과 일치하는 경우가 있습니다.");
-            System.out.println("첫 인덱스: " + start);
-            System.out.println("끝 인덱스: " + end);
-        } else {
-            System.out.println("일치하는 부분 배열을 찾지 못했습니다.");
-        }
+        int[] numbers = { 1, 2, 3, 4, 5, 6, 7 };
+        int k = 3; // 윈도우 크기
+        System.out.println("최대 합: " + findMaxSumSubArray(numbers, k));
     }
 
-    public static int[] findSubarraySum(int[] nums, int target) {
+    public static int findMaxSumSubArray(int[] numbers, int k) {
+        int maxSum = 0;
         int windowSum = 0;
-        int windowStart = 0;
+        int start = 0;
 
-        for (int windowEnd = 0; windowEnd < nums.length; windowEnd++) {
-            windowSum += nums[windowEnd];
+        for (int end = 0; end < numbers.length; end++) {
+            windowSum += numbers[end]; // 윈도우의 끝에 요소 추가
 
-            while (windowSum > target) {
-                windowSum -= nums[windowStart];
-                windowStart++;
-            }
-
-            if (windowSum == target) {
-                return new int[]{windowStart, windowEnd};
+            // 윈도우의 크기가 k일 때
+            if (end >= k - 1) {
+                maxSum = Math.max(maxSum, windowSum); // 최대 합 갱신
+                windowSum -= numbers[start]; // 윈도우의 시작에 있는 요소 제거
+                start++; // 윈도우의 시작점 이동
             }
         }
 
-        return null;
+        return maxSum;
     }
 }

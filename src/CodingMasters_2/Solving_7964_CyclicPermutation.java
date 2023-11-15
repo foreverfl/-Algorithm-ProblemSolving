@@ -6,17 +6,18 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-public class _7964_CyclicPermutation {
+public class Solving_7964_CyclicPermutation {
 
     public static final int MOD = 1000000007;
     public static int ans = 0;
 
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int N = Integer.parseInt(br.readLine());
-        List<Integer> permutations = new ArrayList<>();
-        generatePermutations(permutations, N);
-        System.out.println(ans % MOD);
+        for (int i = 0; i < 10; i++) {
+            List<Integer> permutations = new ArrayList<>();
+            generatePermutations(permutations, i);
+            System.out.println(i + ": " + ans % MOD);
+        }
+
     }
 
     public static void generatePermutations(List<Integer> current, int N) {

@@ -7,16 +7,16 @@ import java.util.PriorityQueue;
 
 public class Solving_7911_HoneyFruit {
 
-    static class Coord {
-        int x, y, day, movesLeft;
+    static class Point {
+        int x, y, day, honeyEffect;
         boolean ateHoney;
 
-        public Coord(int x, int y, int day, int movesLeft, boolean ateHoney) {
+        public Point(int x, int y, int day, boolean ateHoney, int honeyEffect) {
             this.x = x;
             this.y = y;
             this.day = day;
-            this.movesLeft = movesLeft;
             this.ateHoney = ateHoney;
+            this.honeyEffect = honeyEffect;
         }
     }
 
@@ -31,14 +31,14 @@ public class Solving_7911_HoneyFruit {
             map[i] = br.readLine().toCharArray();
         }
 
-        Coord start = null;
-        Coord end = null;
+        Point start = null;
+        Point end = null;
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < M; j++) {
                 if (map[i][j] == 'A') {
-                    start = new Coord(i, j, 0, 0, false);
+                    start = new Point(i, j, 0, false, 0);
                 } else if (map[i][j] == 'B') {
-                    end = new Coord(i, j, -1, 0, false);
+                    end = new Point(i, j, 0, false, 0);
                 }
             }
         }
@@ -47,22 +47,17 @@ public class Solving_7911_HoneyFruit {
 
     }
 
-    public static int escapeMaze(int N, int M, char[][] map, Coord start, Coord end) {
+    public static int escapeMaze(int N, int M, char[][] map, Point start, Point end) {
         boolean[][][] visited = new boolean[N][M][2];
         int[] dx = { -1, 1, 0, 0 };
         int[] dy = { 0, 0, -1, 1 };
 
-        PriorityQueue<Coord> queue = new PriorityQueue<>((a, b) -> a.day - b.day);
-        queue.offer(new Coord(start.x, start.y, 0, 1, false));
+        PriorityQueue<Point> queue = new PriorityQueue<>((p1, p2) -> Integer.compare(p1.day, p2.day));
+        queue.offer(new Point(start.x, start.y, 0, false, 0));
         visited[start.x][start.y][0] = true;
 
         while (!queue.isEmpty()) {
-            Coord now = queue.poll();
-
-            if (now.movesLeft == 0 && !now.ateHoney) {
-                now.day++;
-                now.movesLeft = 1; // 하루에 한 칸씩 이동 가능하도록 리셋
-            }
+            Point now = queue.poll();
 
             if (now.x == end.x && now.y == end.y) {
                 return now.day;
@@ -71,23 +66,31 @@ public class Solving_7911_HoneyFruit {
             for (int i = 0; i < 4; i++) {
                 int nx = now.x + dx[i];
                 int ny = now.y + dy[i];
-                int ateHoney = now.movesLeft > 1 ? 1 : 0;
+                int honeyIndex = now.ateHoney ? 1 : 0;
 
-                if (!isValid(nx, ny, N, M))
+                if (!isValid(nx, ny, N, M) || visited[nx][ny][honeyIndex])
                     continue;
 
-                if (visited[nx][ny][ateHoney])
+                if (map[nx][ny] == '#') {
                     continue;
+                }
 
-                if (map[nx][ny] != '#') {
-                    visited[nx][ny][ateHoney] = true;
+                visited[nx][ny][honeyIndex] = true;
 
+                if (now.honeyEffect == 1) {
                     if (map[nx][ny] == 'G') {
-                        queue.offer(new Coord(nx, ny, now.day, 2, true));
+                        queue.offer(new Point(nx, ny, now.day, true, 1));
                     } else {
-                        queue.offer(new Coord(nx, ny, now.day, now.movesLeft - 1, now.ateHoney));
+                        queue.offer(new Point(nx, ny, now.day, false, 1));
+                    }
+                } else {
+                    if (map[nx][ny] == 'G') {
+                        queue.offer(new Point(nx, ny, now.day + 1, true, 1));
+                    } else {
+                        queue.offer(new Point(nx, ny, now.day + 1, false, 1));
                     }
                 }
+
             }
         }
 

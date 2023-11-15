@@ -6,6 +6,167 @@
   "configurations": [
     {
       "type": "java",
+      "name": "_7917_FireworkFestival",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7917_FireworkFestival",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7920_InvestingInStocks",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7920_InvestingInStocks",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "HashMap_getOrDefault",
+      "request": "launch",
+      "mainClass": "Java.HashMap_getOrDefault",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7919_Musical",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7919_Musical",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Arrays_binarySearch",
+      "request": "launch",
+      "mainClass": "Java.Arrays_binarySearch",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7909_Confidence",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7909_Confidence",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Permutation",
+      "request": "launch",
+      "mainClass": "algorithm.Permutation",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Collections_swap",
+      "request": "launch",
+      "mainClass": "Java.Collections_swap",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7915_FoodDelivery",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7915_FoodDelivery",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7907_MetabusRabbit",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7907_MetabusRabbit",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Solving_7911_HoneyFruit",
+      "request": "launch",
+      "mainClass": "CodingMasters_2.Solving_7911_HoneyFruit",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7912_PaintingGrid",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7912_PaintingGrid",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7913_DevelopingNewMaterials",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7913_DevelopingNewMaterials",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7897_WalkingTrail",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7897_WalkingTrail",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7891_CardGame",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7891_CardGame",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7902_CountingPrimeNumber",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7902_CountingPrimeNumber",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7899_SinkHole",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7899_SinkHole",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "CumulativeSum",
+      "request": "launch",
+      "mainClass": "algorithm.CumulativeSum",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7900_Blog",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7900_Blog",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Solving_7937_ShufflingCards",
+      "request": "launch",
+      "mainClass": "CodingMasters_2.Solving_7937_ShufflingCards",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Solving_7944_SideGigs",
+      "request": "launch",
+      "mainClass": "CodingMasters_2.Solving_7944_SideGigs",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7888_Neighbor",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7888_Neighbor",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7934_RestoringString",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7934_RestoringString",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
       "name": "_7964_CyclicPermutation",
       "request": "launch",
       "mainClass": "CodingMasters_2._7964_CyclicPermutation",
