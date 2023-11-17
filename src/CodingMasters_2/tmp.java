@@ -1,61 +1,51 @@
 package CodingMasters_2;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class tmp {
-    public static void main(String[] args) {
-        // 노드의 개수
-        int N = 5;
+    public static int countPossibleOriginalSentences(String[] words1, String[] words2) {
+        Map<String, Integer> positions1 = new HashMap<>();
+        Map<String, Integer> positions2 = new HashMap<>();
 
-        // 간선 목록 (양방향 간선)
-        List<int[]> edges = new ArrayList<>();
-        edges.add(new int[] { 1, 2 });
-        edges.add(new int[] { 2, 3 });
-        edges.add(new int[] { 3, 4 });
-        edges.add(new int[] { 4, 5 });
-        edges.add(new int[] { 5, 1 }); // 사이클을 만드는 간선
-
-        // 그래프 생성
-        List<List<Integer>> graph = new ArrayList<>();
-        for (int i = 0; i < N; i++) {
-            graph.add(new ArrayList<>());
+        // 각 단어의 위치를 저장
+        for (int i = 0; i < words1.length; i++) {
+            positions1.put(words1[i], i);
+            positions2.put(words2[i], i);
         }
 
-        // 간선 추가
-        for (int[] edge : edges) {
-            graph.get(edge[0] - 1).add(edge[1] - 1);
-            graph.get(edge[1] - 1).add(edge[0] - 1);
-        }
-
-        // 사이클 탐지
-        boolean[] visited = new boolean[N];
-        boolean hasCycle = false;
-        for (int i = 0; i < N; i++) {
-            if (!visited[i]) {
-                if (dfs(i, -1, visited, graph)) {
-                    hasCycle = true;
-                    break;
-                }
+        // 교환 가능한 단어 쌍의 수를 찾기
+        int swapsNeeded = 0;
+        for (String word : words1) {
+            if (positions1.get(word) != positions2.get(word)) {
+                swapsNeeded++;
             }
         }
 
-        // 결과 출력
-        System.out.println("Does the graph have a cycle? " + hasCycle);
+        // 실제로 교환되는 것은 쌍이므로, 총 교환 횟수는 절반
+        swapsNeeded /= 2;
+
+        // 교환 가능한 쌍이 없다면, 원래 문장은 하나뿐
+        if (swapsNeeded == 0) {
+            return 1;
+        }
+
+        // 교환 가능한 쌍이 있다면, 가능한 조합의 수 계산
+        int combinations = 1;
+        for (int i = 1; i <= swapsNeeded; i++) {
+            combinations *= i;
+        }
+
+        return combinations;
     }
 
-    public static boolean dfs(int current, int parent, boolean[] visited, List<List<Integer>> graph) {
-        visited[current] = true;
+    public static void main(String[] args) {
+        String[] sentence1 = { "buy", "our", "merch", "great", "sale" };
+        String[] sentence2 = { "sale", "merch", "our", "great", "buy" };
 
-        for (int i : graph.get(current)) {
-            if (!visited[i]) {
-                if (dfs(i, current, visited, graph)) {
-                    return true;
-                }
-            } else if (i != parent) { // 사이클을 발견한 경우
-                return true;
-            }
-        }
-        return false;
+        int possibleSentences = countPossibleOriginalSentences(sentence1, sentence2);
+        System.out.println("Possible original sentences: " + possibleSentences);
     }
 }

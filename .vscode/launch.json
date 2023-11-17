@@ -6,6 +6,69 @@
   "configurations": [
     {
       "type": "java",
+      "name": "_7905_SwitchFactory",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7905_SwitchFactory",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7904_CommunityManager",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7904_CommunityManager",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7896_Bracelet",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7896_Bracelet",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7895_LegendaryThief",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7895_LegendaryThief",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "DateTimeFormatter_ofPattern",
+      "request": "launch",
+      "mainClass": "Java.DateTimeFormatter_ofPattern",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "LocalTime_plusMinutes",
+      "request": "launch",
+      "mainClass": "Java.LocalTime_plusMinutes",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7907_SettingAnAlarm",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7907_SettingAnAlarm",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Solving_7897_WalkingTrail",
+      "request": "launch",
+      "mainClass": "CodingMasters_2.Solving_7897_WalkingTrail",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Solving_7888_Neighbor",
+      "request": "launch",
+      "mainClass": "CodingMasters_2.Solving_7888_Neighbor",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
       "name": "_7917_FireworkFestival",
       "request": "launch",
       "mainClass": "CodingMasters_2._7917_FireworkFestival",
