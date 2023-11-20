@@ -3,40 +3,62 @@ package CodingMasters_2;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Solving_7952_WordChain {
+
+    public static List<List<String>> wordsChains = new ArrayList<>();
+    public static boolean[] visited;
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
         String[] words = new String[N];
+        visited = new boolean[N];
 
         for (int i = 0; i < N; i++) {
             words[i] = br.readLine();
         }
 
-        System.out.println(predictWinner(words));
+        backtrack(words, new ArrayList<>());
+        int maxLen = -1;
+        for (List<String> wordChain : wordsChains) {
+            maxLen = Math.max(maxLen, calcLength(wordChain));
+        }
+
+        System.out.println(maxLen % 2 == 1 ? "gayeong" : "nayeong");
+
     }
 
-    public static String predictWinner(String[] words) {
-        boolean[] used = new boolean[words.length];
-        int result = playGame(words, used, ' ', 0);
-        return result == 1 ? "gayeong" : "nayeong";
-    }
+    public static void backtrack(String[] words, List<String> currentChain) {
+        if (currentChain.size() == words.length) {
+            wordsChains.add(new ArrayList<>(currentChain));
+            return;
+        }
 
-    public static int playGame(String[] words, boolean[] used, char lastChar, int turn) {
-        boolean flag = false; // 다음 차례의 단어를 찾았는지 여부
         for (int i = 0; i < words.length; i++) {
-            if (!used[i] && (words[i].charAt(0) == lastChar || lastChar == ' ')) {
-                used[i] = true;
-                if (playGame(words, used, words[i].charAt(words[i].length() - 1), 1 - turn) == turn) {
-
-                    used[i] = false;
-                    return turn;
-                }
-                used[i] = false;
-                flag = true;
+            if (!visited[i]) {
+                visited[i] = true;
+                currentChain.add(words[i]);
+                backtrack(words, currentChain);
+                currentChain.remove(currentChain.size() - 1);
+                visited[i] = false;
             }
         }
-        return flag ? 1 - turn : turn;
     }
+
+    public static int calcLength(List<String> wordChain) {
+        int len = 1;
+        for (int i = 1; i < wordChain.size(); i++) {
+            if (wordChain.get(i - 1).charAt(wordChain.get(i - 1).length() - 1) == wordChain.get(i).charAt(0)) {
+                len++;
+            } else {
+                break;
+            }
+        }
+
+        return len;
+    }
+
 }

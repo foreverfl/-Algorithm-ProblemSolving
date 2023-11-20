@@ -3,7 +3,9 @@ package CodingMasters_2;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.stream.Stream;
 
 public class Solving_7914_MakingTriangle {
@@ -11,18 +13,27 @@ public class Solving_7914_MakingTriangle {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
         int[] sticks = Stream.of(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
-
         Arrays.sort(sticks);
+        boolean[] visited = new boolean[N];
 
-        int maxSticks = N;
-        for (int i = N - 1; i >= 2; i--) {
-            int[] copied = Arrays.copyOf(sticks, i + 1);
-            if (!canMakeTriangle(copied)) {
-                maxSticks = i;
-                break;
+        for (int i = 0; i < N; i++) {
+            makeStickList(sticks, visited, i, new ArrayList<>());
+        }
+    }
+
+    public static boolean makeStickList(int[] sticks, boolean[] visited, int size, List<Integer> now) {
+        if (now.size() == size) {
+            System.out.println(now);
+        }
+
+        for (int i = 0; i < sticks.length; i++) {
+            if (!visited[i]) {
+
             }
         }
-        System.out.println(maxSticks);
+
+        return true;
+
     }
 
     public static boolean canMakeTriangle(int[] sticks) {

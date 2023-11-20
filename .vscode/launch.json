@@ -6,6 +6,104 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Solving_7914_MakingTriangle",
+      "request": "launch",
+      "mainClass": "CodingMasters_2.Solving_7914_MakingTriangle",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Solving_7952_WordChain",
+      "request": "launch",
+      "mainClass": "CodingMasters_2.Solving_7952_WordChain",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7931_ElectronicWatch",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7931_ElectronicWatch",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7930_LaunchingStore",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7930_LaunchingStore",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7921_RecordOfIntranet",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7921_RecordOfIntranet",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Solving_7891_CardGame",
+      "request": "launch",
+      "mainClass": "CodingMasters_2.Solving_7891_CardGame",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7949_JumpGame",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7949_JumpGame",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7925_VAT",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7925_VAT",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7923_TwiceMaze",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7923_TwiceMaze",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7927_PattyPattyBurger",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7927_PattyPattyBurger",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7928_MoneyGame",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7928_MoneyGame",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7932_MakingWindows",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7932_MakingWindows",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7929_GodOfNaturalNumber",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7929_GodOfNaturalNumber",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7933_ArrangingLoad",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7933_ArrangingLoad",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
       "name": "_7905_SwitchFactory",
       "request": "launch",
       "mainClass": "CodingMasters_2._7905_SwitchFactory",
