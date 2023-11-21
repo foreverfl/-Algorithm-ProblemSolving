@@ -1,56 +1,52 @@
 package CodingMasters_2;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Solving_7897_WalkingTrail {
 
-    public static final int[] dx = { 0, 1, 0, -1 }; // 동남서북
-    public static final int[] dy = { 1, 0, -1, 0 };
-    public static boolean[][][] visited; // 방향에 따른 방문 기록
-    public static int N;
-    public static int count;
+    private static final int[][] DIRECTIONS = { { 0, 1 }, { 1, 0 }, { 0, -1 }, { -1, 0 } }; // N, E, S, W
 
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        N = Integer.parseInt(br.readLine());
+    public static void main(String[] args) {
+        int n = 4; // 예시 입력
+        System.out.println("Unique paths for N = 4: " + countUniquePaths(n));
 
-        // 동쪽으로 시작
-        visited = new boolean[2 * N + 1][2 * N + 1][4];
-        for (int i = 0; i < 4; i++) {
-            visited[0][0][i] = true;
-            dfs(0, 0, i, 0, i);
-        }
-
-        System.out.println(count);
-
+        n = 8; // 예시 입력
+        System.out.println("Unique paths for N = 8: " + countUniquePaths(n));
     }
 
-    public static void dfs(int x, int y, int dir, int steps, int startDir) {
-        if (steps == N) {
-            count++;
-            return;
-        }
-
-        for (int i = 0; i < 2; i++) {
-            int nextDir = (dir + (i == 0 ? 1 : 3)) % 4; // i가 0이면 오른쪽 회전, 아니면 왼쪽 회전
-            int nx = x + dx[nextDir];
-            int ny = y + dy[nextDir];
-
-            if (!isValid(nx, ny))
-                continue;
-
-            if (visited[nx][ny][startDir])
-                continue;
-
-            visited[nx][ny][dir] = true;
-            dfs(nx, ny, nextDir, steps + 1, startDir);
-            visited[nx][ny][dir] = false;
-        }
+    private static int countUniquePaths(int n) {
+        return backtrack(0, 0, 0, n, new HashSet<>());
     }
 
-    public static boolean isValid(int x, int y) {
-        return x >= 0 && x < 2 * N + 1 && y >= 0 && y < 2 * N + 1;
+    private static int backtrack(int x, int y, int direction, int stepsRemaining, Set<String> visited) {
+        if (stepsRemaining == 0) {
+            return 1;
+        }
+
+        int paths = 0;
+        String pos = x + "," + y;
+        visited.add(pos);
+
+        // 좌회전
+        int leftDir = (direction + 3) % 4; // 왼쪽으로 회전
+        int nx = x + DIRECTIONS[leftDir][0];
+        int ny = y + DIRECTIONS[leftDir][1];
+        String newPosLeft = nx + "," + ny;
+        if (!visited.contains(newPosLeft)) {
+            paths += backtrack(nx, ny, leftDir, stepsRemaining - 1, visited);
+        }
+
+        // 우회전
+        int rightDir = (direction + 1) % 4; // 오른쪽으로 회전
+        nx = x + DIRECTIONS[rightDir][0];
+        ny = y + DIRECTIONS[rightDir][1];
+        String newPosRight = nx + "," + ny;
+        if (!visited.contains(newPosRight)) {
+            paths += backtrack(nx, ny, rightDir, stepsRemaining - 1, visited);
+        }
+
+        visited.remove(pos);
+        return paths;
     }
 }

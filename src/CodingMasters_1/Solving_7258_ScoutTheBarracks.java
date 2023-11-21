@@ -13,6 +13,7 @@ public class Solving_7258_ScoutTheBarracks {
     public static List<Integer>[] graph;
     public static int[][] memo;
 
+    @SuppressWarnings("unchecked")
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String[] input = br.readLine().split(" ");

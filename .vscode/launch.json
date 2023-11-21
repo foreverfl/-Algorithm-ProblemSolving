@@ -6,6 +6,69 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Backtracking_1",
+      "request": "launch",
+      "mainClass": "algorithm.Backtracking_1",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Backtracking_2",
+      "request": "launch",
+      "mainClass": "algorithm.Backtracking_2",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7948_XOR",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7948_XOR",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Solving_7909_Confidence",
+      "request": "launch",
+      "mainClass": "CodingMasters_2.Solving_7909_Confidence",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7908_SequenceAndDice",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7908_SequenceAndDice",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Solving_7964_CyclicPermutation",
+      "request": "launch",
+      "mainClass": "CodingMasters_2.Solving_7964_CyclicPermutation",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7924_RollingDice",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7924_RollingDice",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7910_KstPermutation",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7910_KstPermutation",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7953_SleepingGayeong",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7953_SleepingGayeong",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
       "name": "Solving_7914_MakingTriangle",
       "request": "launch",
       "mainClass": "CodingMasters_2.Solving_7914_MakingTriangle",
