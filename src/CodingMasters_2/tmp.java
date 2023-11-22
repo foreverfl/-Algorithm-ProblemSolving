@@ -1,49 +1,43 @@
 package CodingMasters_2;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.HashSet;
+import java.util.Set;
 
 public class tmp {
-    public static int countPossibleOriginalSentences(String[] words1, String[] words2) {
-        Map<String, Integer> positions1 = new HashMap<>();
-        Map<String, Integer> positions2 = new HashMap<>();
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int N = Integer.parseInt(br.readLine());
+        String[] first = br.readLine().split(" ");
+        String[] second = br.readLine().split(" ");
 
-        // 각 단어의 위치를 저장
-        for (int i = 0; i < words1.length; i++) {
-            positions1.put(words1[i], i);
-            positions2.put(words2[i], i);
-        }
+        Set<String> first_set = mixString(first, N);
+        Set<String> second_set = mixString(second, N);
 
-        // 교환 가능한 단어 쌍의 수를 찾기
-        int swapsNeeded = 0;
-        for (String word : words1) {
-            if (positions1.get(word) != positions2.get(word)) {
-                swapsNeeded++;
+        int cnt = 0;
+        for (String str : first_set) {
+            if (second_set.contains(str)) {
+                cnt++;
             }
         }
 
-        // 실제로 교환되는 것은 쌍이므로, 총 교환 횟수는 절반
-        swapsNeeded /= 2;
-
-        // 교환 가능한 쌍이 없다면, 원래 문장은 하나뿐
-        if (swapsNeeded == 0) {
-            return 1;
-        }
-
-        // 교환 가능한 쌍이 있다면, 가능한 조합의 수 계산
-        int combinations = 1;
-        for (int i = 1; i <= swapsNeeded; i++) {
-            combinations *= i;
-        }
-
-        return combinations;
+        System.out.println(cnt);
     }
 
-    public static void main(String[] args) {
-        String[] sentence1 = { "buy", "our", "merch", "great", "sale" };
-        String[] sentence2 = { "sale", "merch", "our", "great", "buy" };
+    public static Set<String> mixString(String[] arr, int N) {
+        Set<String> set = new HashSet<>();
+        for (int i = 0; i < N; i++) {
+            for (int j = i + 1; j < N; j++) {
+                String[] tmp = arr.clone();
+                String tmp_element = tmp[i];
+                tmp[i] = tmp[j];
+                tmp[j] = tmp_element;
+                set.add(String.join(" ", tmp));
+            }
+        }
 
-        int possibleSentences = countPossibleOriginalSentences(sentence1, sentence2);
-        System.out.println("Possible original sentences: " + possibleSentences);
+        return set;
     }
 }

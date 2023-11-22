@@ -25,22 +25,25 @@ public class Solving_7891_CardGame {
 
         // N이 4 이상일 때
         for (int i = 4; i <= N; i++) {
+            // i를 선택하지 않음
+            int a1 = dp[i - 1][0]; // 철수
+            int b1 = cards[i]; // 영희
             // i 선택
-            int a1 = cards[i] + dp[i - 2][0]; // 철수
-            int b1 = cards[i - 1] + dp[i - 3][1]; // 영희
+            int a2 = cards[i] + dp[i - 2][0];
+            int b2 = cards[i - 1] + dp[i - 3][1];
             // i / i - 1 선택
-            int a2 = cards[i] + dp[i - 3][0];
-            int b2 = cards[i - 2] + dp[i - 4][1];
+            int a3 = cards[i] + dp[i - 3][0];
+            int b3 = cards[i - 2] + dp[i - 4][1];
             // i / i - 1 / i - 2 선택
-            int a3 = cards[i] + cards[i - 1] + cards[i - 2] + dp[i - 4][0];
-            int b3;
+            int a4 = cards[i] + cards[i - 1] + cards[i - 2] + dp[i - 4][0];
+            int b4;
             if (i == 4) {
-                b3 = cards[i - 3];
+                b4 = cards[i - 3];
             } else {
-                b3 = cards[i - 3] + dp[i - 5][1];
+                b4 = cards[i - 3] + dp[i - 5][1];
             }
 
-            int max = Math.max(a1, Math.max(a2, a3));
+            int max = Math.max(a1, Math.max(a2, Math.max(a3, a4)));
             if (max == a1) {
                 dp[i][0] = a1;
                 dp[i][1] = b1;
@@ -50,6 +53,9 @@ public class Solving_7891_CardGame {
             } else if (max == a3) {
                 dp[i][0] = a3;
                 dp[i][1] = b3;
+            } else if (max == a4) {
+                dp[i][0] = a4;
+                dp[i][1] = b4;
             }
         }
 

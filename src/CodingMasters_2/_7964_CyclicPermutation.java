@@ -1,28 +1,61 @@
 package CodingMasters_2;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Solving_7964_CyclicPermutation {
+public class _7964_CyclicPermutation {
 
     public static final int MOD = 1000000007;
-    public static int ans = 0;
+    public static int ans;
+    public static int cnt_no_cycle;
+    public static int permutation;
 
     public static void main(String[] args) throws IOException {
-        for (int i = 0; i < 10; i++) {
-            List<Integer> permutations = new ArrayList<>();
-            generatePermutations(permutations, i);
-            System.out.println(i + ": " + ans % MOD);
-        }
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int N = Integer.parseInt(br.readLine());
+        System.out.println(calculateSequence(N));
 
+        // for (int i = 3; i <= 10; i++) {
+        // List<Integer> permutations = new ArrayList<>();
+        // generatePermutations(permutations, i);
+        // System.out.println(
+        // "[" + i + "] cnt_no_cycle: " + cnt_no_cycle + " / permutation: " +
+        // permutation + " / ans: " + ans);
+        // ans = 0;
+        // cnt_no_cycle = 0;
+        // permutation = 0;
+        // }
+    }
+
+    public static long calculateSequence(int n) {
+        BigInteger factorial = factorial(n);
+        BigInteger powerOfTwo = BigInteger.valueOf(2).pow(n - 1);
+        BigInteger mod = BigInteger.valueOf(MOD);
+
+        BigInteger result = factorial.subtract(powerOfTwo).mod(mod);
+        return result.longValue();
+    }
+
+    public static BigInteger factorial(int n) {
+        BigInteger result = BigInteger.ONE;
+        for (int i = 2; i <= n; i++) {
+            result = result.multiply(BigInteger.valueOf(i)).mod(BigInteger.valueOf(MOD));
+        }
+        return result;
     }
 
     public static void generatePermutations(List<Integer> current, int N) {
         if (current.size() == N) {
+            permutation++;
             List<int[]> edges = generateEdges(current);
             if (hasCycle(edges, N)) {
                 ans++;
+            } else {
+                cnt_no_cycle++;
             }
             return;
         }

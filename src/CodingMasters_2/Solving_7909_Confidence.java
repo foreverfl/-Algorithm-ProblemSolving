@@ -8,18 +8,37 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Solving_7909_Confidence {
+    public static class Player implements Comparable<Player> {
+        long weight, worries;
+
+        Player(long weight, long worries) {
+            this.weight = weight;
+            this.worries = worries;
+        }
+
+        // '몸무게 - 걱정거리' 값으로 정렬
+        @Override
+        public int compareTo(Player other) {
+            return Long.compare(this.weight, other.weight);
+        }
+
+        public String toString() {
+            return "weight: " + weight + " / worries: " + worries;
+        }
+    }
+
     public static final int MOD = 1_000_000_007;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int N = Integer.parseInt(br.readLine());
-        long[] weight = new long[N];
-        long[] worries = new long[N];
+        Player[] players = new Player[N];
 
         String[] input = br.readLine().split(" ");
-        weight[0] = Long.parseLong(input[0]);
-        worries[0] = Long.parseLong(input[1]);
+        long initialWeight = Long.parseLong(input[0]);
+        long initialWorries = Long.parseLong(input[1]);
+        players[0] = new Player(initialWeight, initialWorries);
 
         input = br.readLine().split(" ");
         long multiplierW = Long.parseLong(input[0]);
@@ -41,40 +60,25 @@ public class Solving_7909_Confidence {
                 multiplierW = update[0];
                 multiplierP = update[1];
             }
-            weight[i] = (weight[i - 1] * multiplierW) % MOD;
-            worries[i] = (worries[i - 1] * multiplierP) % MOD;
+            long newWeight = (players[i - 1].weight * multiplierW) % MOD;
+            long newWorries = (players[i - 1].worries * multiplierP) % MOD;
+            players[i] = new Player(newWeight, newWorries);
         }
 
-        long sum = 0;
-        long[] confidenceLevels = new long[N];
+        Arrays.sort(players);
+        System.out.println(Arrays.toString(players));
+
+        long totalConfidentWins = 0;
         for (int i = 0; i < N; i++) {
-            confidenceLevels[i] = weight[i] - worries[i];
-        }
-        Arrays.sort(confidenceLevels);
-
-        for (int i = 0; i < N; i++) {
-            long target = weight[i] - worries[i];
-            int count = lowerBound(confidenceLevels, target);
-            sum = (sum + count) % MOD;
-        }
-
-        System.out.println(sum);
-    }
-
-    public static int lowerBound(long[] array, long target) {
-        int low = 0;
-        int high = array.length;
-
-        while (low < high) {
-            int mid = low + (high - low) / 2;
-
-            if (array[mid] < target) {
-                low = mid + 1;
-            } else {
-                high = mid;
+            int j = i + 1;
+            while (j < N && players[i].weight - players[i].worries > players[j].weight) {
+                totalConfidentWins++;
+                j++;
             }
         }
 
-        return low;
+        System.out.println(totalConfidentWins % MOD);
+
     }
+
 }
