@@ -6,6 +6,62 @@
   "configurations": [
     {
       "type": "java",
+      "name": "_7942_TapeForProhibitingAccess",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7942_TapeForProhibitingAccess",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Solving_7904_CommunityManager",
+      "request": "launch",
+      "mainClass": "CodingMasters_2.Solving_7904_CommunityManager",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7943_Dice",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7943_Dice",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7950_GoingToFriend",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7950_GoingToFriend",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Solving_7946_OptimumLocation",
+      "request": "launch",
+      "mainClass": "CodingMasters_2.Solving_7946_OptimumLocation",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7947_MaintainanceWork",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7947_MaintainanceWork",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Bitmasking_subset",
+      "request": "launch",
+      "mainClass": "algorithm.Bitmasking_subset",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7951_ObservingInteger",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7951_ObservingInteger",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
       "name": "Backtracking_1",
       "request": "launch",
       "mainClass": "algorithm.Backtracking_1",
