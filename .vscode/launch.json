@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Solving_7935_CuttingNetOfACube",
+      "request": "launch",
+      "mainClass": "CodingMasters_2.Solving_7935_CuttingNetOfACube",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
       "name": "Solving_7914_MakingTriangle",
       "request": "launch",
       "mainClass": "CodingMasters_2.Solving_7914_MakingTriangle",

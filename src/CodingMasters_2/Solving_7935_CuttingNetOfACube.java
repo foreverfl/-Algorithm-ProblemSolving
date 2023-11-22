@@ -73,7 +73,7 @@ public class Solving_7935_CuttingNetOfACube {
     }
 
     // 회전 함수
-    private static int[][] rotatePattern(int[][] pattern, int degree) {
+    public static int[][] rotatePattern(int[][] pattern, int degree) {
         int[][] rotated = new int[pattern.length][2];
         for (int i = 0; i < pattern.length; i++) {
             int x = pattern[i][0];
@@ -85,20 +85,20 @@ public class Solving_7935_CuttingNetOfACube {
     }
 
     // 좌표를 회전시키는 함수
-    private static int[] rotateCoordinates(int x, int y, int degree) {
+    public static int[] rotateCoordinates(int x, int y, int degree) {
         int[] newCoordinates = new int[2];
         switch (degree) {
             case 90:
-                newCoordinates[0] = y;
-                newCoordinates[1] = -x;
+                newCoordinates[0] = -y;
+                newCoordinates[1] = x;
                 break;
             case 180:
                 newCoordinates[0] = -x;
                 newCoordinates[1] = -y;
                 break;
             case 270:
-                newCoordinates[0] = -y;
-                newCoordinates[1] = x;
+                newCoordinates[0] = y;
+                newCoordinates[1] = -x;
                 break;
             default: // 원본 좌표를 반환
                 newCoordinates[0] = x;
@@ -110,9 +110,9 @@ public class Solving_7935_CuttingNetOfACube {
     // 원본 cube를 건드리지 않고 체크하기
     public static boolean canPlaceCube(int[][] map, int[][] cube, int x, int y) {
         for (int[] square : cube) {
-            int newX = x + square[0];
-            int newY = y + square[1];
-            if (newX < 0 || newX >= 10 || newY < 0 || newY >= 10) {
+            int nx = x + square[0];
+            int ny = y + square[1];
+            if (nx < 0 || nx >= 10 || ny < 0 || ny >= 10) {
                 return false;
             }
         }
