@@ -6,6 +6,76 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Solving_7960_ExploringSpace",
+      "request": "launch",
+      "mainClass": "CodingMasters_2.Solving_7960_ExploringSpace",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "HashSetExample",
+      "request": "launch",
+      "mainClass": "Java.HashSetExample",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Objects_hash",
+      "request": "launch",
+      "mainClass": "Java.Objects_hash",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Object_hashCode",
+      "request": "launch",
+      "mainClass": "Java.Object_hashCode",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Object_getClass",
+      "request": "launch",
+      "mainClass": "Java.Object_getClass",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Object_equals",
+      "request": "launch",
+      "mainClass": "Java.Object_equals",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7958_TwoContainer",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7958_TwoContainer",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7962_CompositionProgram",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7962_CompositionProgram",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Solving_7906_ChickenTreeAndFence",
+      "request": "launch",
+      "mainClass": "CodingMasters_2.Solving_7906_ChickenTreeAndFence",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Solving_7909_Confidence",
+      "request": "launch",
+      "mainClass": "CodingMasters_2.Solving_7909_Confidence",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
       "name": "Solving_7935_CuttingNetOfACube",
       "request": "launch",
       "mainClass": "CodingMasters_2.Solving_7935_CuttingNetOfACube",

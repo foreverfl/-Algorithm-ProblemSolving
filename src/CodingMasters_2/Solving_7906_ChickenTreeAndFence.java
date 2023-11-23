@@ -35,54 +35,50 @@ public class Solving_7906_ChickenTreeAndFence {
             coords.add(new Coord(Integer.parseInt(input[0]), Integer.parseInt(input[1])));
         }
 
-        List<Coord> sortByX = new ArrayList<>(coords);
-        List<Coord> sortByY = new ArrayList<>(coords);
-
-        Collections.sort(sortByX, Comparator.comparingInt(o -> o.x));
-        Collections.sort(sortByY, Comparator.comparingInt(o -> o.y));
+        // X와 Y를 동시에 고려한 정렬
+        Collections.sort(coords, new Comparator<Coord>() {
+            @Override
+            public int compare(Coord c1, Coord c2) {
+                if (c1.x != c2.x) {
+                    return Integer.compare(c1.x, c2.x);
+                } else {
+                    return Integer.compare(c1.y, c2.y);
+                }
+            }
+        });
 
         int[] ans = new int[5];
         for (int i = 0; i < 5; i++) {
             int size = N - i;
-            ans[i] = Math.min(calcMinLength(sortByX, size, true), calcMinLength(sortByY, size, false));
+            ans[i] = calcMinLength(coords, size);
         }
 
-        for (int element : ans) {
-            System.out.println(element);
+        for (int cost : ans) {
+            System.out.println(cost);
         }
 
     }
 
-    public static int calcMinLength(List<Coord> sortedCoords, int size, boolean isSortByX) {
-
-        int minRes = Integer.MAX_VALUE;
-        for (int i = 0; i <= sortedCoords.size() - size; i++) {
-            List<Coord> subList = sortedCoords.subList(i, i + size);
-            minRes = Math.min(minRes, calcLength(subList, isSortByX));
+    public static int calcMinLength(List<Coord> coords, int size) {
+        int minCost = Integer.MAX_VALUE;
+        for (int i = 0; i <= coords.size() - size; i++) {
+            List<Coord> subList = coords.subList(i, i + size);
+            minCost = Math.min(minCost, calcPerimeter(subList));
         }
-        return minRes;
+        return minCost;
     }
 
-    public static int calcLength(List<Coord> coords, boolean isSortByX) {
-        if (coords.isEmpty()) {
-            return 0;
+    public static int calcPerimeter(List<Coord> coords) {
+        int minX = Integer.MAX_VALUE, maxX = Integer.MIN_VALUE;
+        int minY = Integer.MAX_VALUE, maxY = Integer.MIN_VALUE;
+
+        for (Coord coord : coords) {
+            minX = Math.min(minX, coord.x);
+            maxX = Math.max(maxX, coord.x);
+            minY = Math.min(minY, coord.y);
+            maxY = Math.max(maxY, coord.y);
         }
 
-        int min_x = coords.get(0).x;
-        int max_x = coords.get(coords.size() - 1).x;
-        int min_y = coords.get(0).y;
-        int max_y = coords.get(coords.size() - 1).y;
-
-        for (int i = 0; i < coords.size(); i++) {
-            if (isSortByX) { // x축으로 정렬된 경우
-                min_y = Math.min(min_y, coords.get(i).y);
-                max_y = Math.max(max_y, coords.get(i).y);
-            } else { // y축으로 정렬된 경우
-                min_x = Math.min(min_x, coords.get(i).x);
-                max_x = Math.max(max_x, coords.get(i).x);
-            }
-        }
-
-        return (max_x - min_x + 2) * 2 + (max_y - min_y + 2) * 2;
+        return 2 * (maxX - minX + 1) + 2 * (maxY - minY + 1) + 4;
     }
 }

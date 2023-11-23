@@ -3,81 +3,38 @@ package CodingMasters_2;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.Arrays;
 
 public class Solving_7914_MakingTriangle {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
-        List<Integer> sticks = new LinkedList<>();
+        int[] sticks = new int[N];
         String[] input = br.readLine().split(" ");
         for (int i = 0; i < N; i++) {
-            sticks.add(Integer.parseInt(input[i]));
+            sticks[i] = Integer.parseInt(input[i]);
         }
 
-        Collections.sort(sticks);
+        Arrays.sort(sticks);
 
-        // 전체 막대기를 다 사용하는 경우
-        if (arePossibleSticks(sticks)) {
-            System.out.println(N);
-            return;
-        }
+        int result = findMaxSticks(sticks);
 
-        int removeCnt = 1;
-        loop: while (true) {
+        System.out.println(result);
 
-            List<int[]> pairs = generatePairs(removeCnt); // 제거할 양 끝의 막대 개수
-            for (int[] pair : pairs) {
-                List<Integer> tmp = new ArrayList<>();
-                tmp.addAll(sticks);
+    }
 
-                // 앞쪽에서 막대 제거
-                while (pair[0]-- > 0) {
-                    tmp.remove(0);
-                }
+    public static int findMaxSticks(int[] sticks) {
+        int left = 0;
+        int right = sticks.length - 1;
 
-                // 뒤쪽에서 막대 제거
-                while (pair[1]-- > 0) {
-                    tmp.remove(tmp.size() - 1);
-                }
-
-                if (arePossibleSticks(tmp))
-                    break loop;
+        while (left < right - 1) {
+            if (sticks[left] + sticks[left + 1] > sticks[right]) {
+                return right - left + 1;
+            } else {
+                left++;
             }
         }
 
-        System.out.println(N - removeCnt);
+        return 0;
     }
-
-    public static List<int[]> generatePairs(int N) {
-        List<int[]> pairs = new ArrayList<>();
-
-        for (int i = 0; i <= N; i++) {
-            pairs.add(new int[] { i, N - i });
-        }
-
-        return pairs;
-    }
-
-    public static boolean arePossibleSticks(List<Integer> sticks) {
-        int N = sticks.size();
-        for (int i = 0; i < N - 2; i++) {
-            for (int j = i + 1; j < N - 1; j++) {
-                for (int k = j + 1; k < N; k++) {
-                    if (!isTriangle(sticks.get(i), sticks.get(j), sticks.get(k))) {
-                        return false;
-                    }
-                }
-            }
-        }
-        return true;
-    }
-
-    public static boolean isTriangle(int a, int b, int c) {
-        return (a + b > c) && (a + c > b) && (b + c > a);
-    }
-
 }

@@ -3,27 +3,26 @@ package CodingMasters_2;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Solving_7909_Confidence {
     public static class Player implements Comparable<Player> {
-        long weight, worries;
+        long weight, worries, confidence;
 
         Player(long weight, long worries) {
             this.weight = weight;
             this.worries = worries;
+            this.confidence = (weight - worries + MOD) % MOD;
         }
 
-        // '몸무게 - 걱정거리' 값으로 정렬
         @Override
         public int compareTo(Player other) {
-            return Long.compare(this.weight, other.weight);
+            return Long.compare(this.confidence, other.confidence);
         }
 
         public String toString() {
-            return "weight: " + weight + " / worries: " + worries;
+            return "(" + weight + " / " + worries + " / " + confidence + ")";
         }
     }
 
@@ -65,19 +64,19 @@ public class Solving_7909_Confidence {
             players[i] = new Player(newWeight, newWorries);
         }
 
-        Arrays.sort(players);
-        System.out.println(Arrays.toString(players));
-
         long totalConfidentWins = 0;
         for (int i = 0; i < N; i++) {
-            int j = i + 1;
-            while (j < N && players[i].weight - players[i].worries > players[j].weight) {
-                totalConfidentWins++;
-                j++;
+            int confidentWins = 0;
+            for (int j = 0; j < N; j++) {
+                if (i != j && players[i].weight - players[i].worries > players[j].weight) {
+                    confidentWins++;
+                }
             }
+            totalConfidentWins += confidentWins;
+            totalConfidentWins %= MOD;
         }
 
-        System.out.println(totalConfidentWins % MOD);
+        System.out.println(totalConfidentWins);
 
     }
 

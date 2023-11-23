@@ -3,16 +3,18 @@ package CodingMasters_2;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 
 public class _7905_SwitchFactory {
 
     public static class Action {
         int time;
-        char action;
+        char type;
 
-        Action(int time, char action) {
+        Action(int time, char type) {
             this.time = time;
-            this.action = action;
+            this.type = type;
         }
     }
 
@@ -20,62 +22,60 @@ public class _7905_SwitchFactory {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
 
-        Action[] action = new Action[N];
+        List<Action> actions = new ArrayList<>();
         for (int i = 0; i < N; i++) {
             String[] input = br.readLine().split(" ");
-            action[i] = new Action(Integer.parseInt(input[0]), input[1].charAt(0));
+            int time = Integer.parseInt(input[0]);
+            char type = input[1].charAt(0);
+            actions.add(new Action(time, type));
         }
-
-        int Q = Integer.parseInt(br.readLine());
-        int[] questions = new int[Q];
-        for (int i = 0; i < Q; i++) {
-            questions[i] = Integer.parseInt(br.readLine());
-        }
-
-        int time = 0;
-        // boolean isToggleOn = false;
-        boolean isToggleOn = false;
-        int toggleOnTime = 0;
-        int holdOnTime = 0;
 
         StringBuilder sb = new StringBuilder();
-        // A, B -> toggle
-        // C, D -> hold
-        int j = 0;
-        for (int i = 0; i < N; i++) {
-            time = action[i].time;
+        int Q = Integer.parseInt(br.readLine());
+        for (int i = 0; i < Q; i++) {
+            int k = Integer.parseInt(br.readLine());
 
-            if (action[i].action == 'A') { // 토글 스위치 누름
-                isToggleOn = !isToggleOn;
-                if (isToggleOn) {
+            boolean toggle = false;
+            boolean hold = false;
+            int lastToggleTime = 0;
+            int lastHoldTime = 0;
+            int toggleOnTime = 0;
+            int holdOnTime = 0;
 
-                } else {
-
-                }
-            } else if (action[i].action == 'B') {
-                isToggleOn = !isToggleOn;
-                if (isToggleOn) {
-
-                } else {
-
-                }
-            } else if (action[i].action == 'C') { // 홀드 스위치 누름
-                holdOnTime = time - action[i].time;
-            } else if (action[i].action == 'D') {
-                holdOnTime = 0;
-            }
-
-            while (j < questions.length || time <= questions[j]) {
-                int toggleActiveTime = questions[j] - toggleOnTime;
-                int holdActiveTime = questions[j] - holdOnTime;
-                sb.append(toggleActiveTime + " " + holdActiveTime).append('\n');
-
-                if (time < questions[j]) {
+            for (Action action : actions) {
+                if (action.time > k)
                     break;
-                }
 
-                j++;
+                switch (action.type) {
+                    case 'A':
+                        toggle = !toggle;
+                        if (toggle) {
+                            lastToggleTime = action.time;
+                        } else {
+                            toggleOnTime += action.time - lastToggleTime;
+                        }
+                        break;
+                    case 'C':
+                        if (!hold) {
+                            hold = true;
+                            lastHoldTime = action.time;
+                        }
+                        break;
+                    case 'D':
+                        if (hold) {
+                            hold = false;
+                            holdOnTime += action.time - lastHoldTime;
+                        }
+                        break;
+                }
             }
+
+            if (toggle)
+                toggleOnTime += k - lastToggleTime;
+            if (hold)
+                holdOnTime += k - lastHoldTime;
+
+            sb.append(toggleOnTime + " " + holdOnTime).append('\n');
         }
 
         System.out.println(sb.toString().trim());

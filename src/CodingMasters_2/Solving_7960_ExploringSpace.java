@@ -5,61 +5,24 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
 
 public class Solving_7960_ExploringSpace {
 
     static class Edge implements Comparable<Edge> {
+        int src, dest, weight;
 
-        int u;
-        int v;
-        int w;
-
-        Edge(int u, int v, int w) {
-            this.u = u;
-            this.v = v;
-            this.w = w;
+        Edge(int src, int dest, int weight) {
+            this.src = src;
+            this.dest = dest;
+            this.weight = weight;
         }
 
         @Override
-        public int compareTo(Edge o) {
-            return Integer.compare(this.w, o.w);
-        }
-
-    }
-
-    static class UnionFind {
-        int[] parent, rank;
-
-        UnionFind(int n) {
-            parent = new int[n];
-            rank = new int[n];
-            for (int i = 0; i < n; i++) {
-                parent[i] = i;
-            }
-        }
-
-        int find(int i) {
-            if (parent[i] != i) {
-                parent[i] = find(parent[i]);
-            }
-            return parent[i];
-        }
-
-        void union(int x, int y) {
-            int rootX = find(x);
-            int rootY = find(y);
-            if (rootX != rootY) {
-                if (rank[rootX] < rank[rootY]) {
-                    parent[rootX] = rootY;
-                } else if (rank[rootX] > rank[rootY]) {
-                    parent[rootY] = rootX;
-                } else {
-                    parent[rootY] = rootX;
-                    rank[rootX]++;
-                }
-            }
+        public int compareTo(Edge other) {
+            return this.weight - other.weight;
         }
     }
 
@@ -70,38 +33,86 @@ public class Solving_7960_ExploringSpace {
         int M = Integer.parseInt(input[1]);
         int K = Integer.parseInt(input[2]);
 
-        ArrayList<Edge> edges = new ArrayList<>();
-        UnionFind uf = new UnionFind(N);
-
+        List<Edge> edges = new ArrayList<>();
         for (int i = 0; i < M; i++) {
             input = br.readLine().split(" ");
             int u = Integer.parseInt(input[0]) - 1;
             int v = Integer.parseInt(input[1]) - 1;
             int w = Integer.parseInt(input[2]);
-            w = Math.max(K, w); // 최대값 5로 조정
             edges.add(new Edge(u, v, w));
-            uf.union(u, v);
         }
 
-        Collections.sort(edges);
+        // List<List<Edge>> connectedComponents = findConnectedComponents(graph, N);
+        // int totalCost = calculateMSTCost(edges, N, K);
+    }
 
-        int totalCost = 0;
-        for (Edge edge : edges) {
-            int rootU = uf.find(edge.u);
-            int rootV = uf.find(edge.v);
-            if (rootU != rootV) {
-                totalCost += edge.w;
-                uf.union(rootU, rootV);
+    public static List<List<Edge>> findConnectedComponents(List<Edge>[] graph, int N) {
+        boolean[] visited = new boolean[N];
+        List<List<Edge>> components = new ArrayList<>();
+
+        for (int i = 0; i < N; i++) {
+            if (!visited[i]) {
+                List<Edge> component = new ArrayList<>();
+                bfs(graph, visited, i, component);
+                components.add(component);
             }
         }
 
-        Set<Integer> uniqueRoots = new HashSet<>();
+        return components;
+    }
+
+    public static void bfs(List<Edge>[] graph, boolean[] visited, int start, List<Edge> component) {
+        Queue<Integer> queue = new LinkedList<>();
+        queue.offer(start);
+        visited[start] = true;
+
+        while (!queue.isEmpty()) {
+            int node = queue.poll();
+
+            for (Edge edge : graph[node]) {
+                if (!visited[edge.dest]) {
+                    visited[edge.dest] = true;
+                    queue.offer(edge.dest);
+                    component.add(edge);
+                }
+            }
+        }
+    }
+
+    // 유니온 파인드
+    static int find(int[] parent, int i) {
+        if (parent[i] == i) {
+            return i;
+        }
+        return find(parent, parent[i]);
+    }
+
+    static void union(int[] parent, int x, int y) {
+        int xset = find(parent, x);
+        int yset = find(parent, y);
+        parent[xset] = yset;
+    }
+
+    // 주어진 그래프의 모든 연결 성분에 대한 최소 스패닝 트리 비용을 계산
+    static int calculateMSTCost(List<Edge> edges, int N, int K) {
+        Collections.sort(edges);
+
+        int[] parent = new int[N];
         for (int i = 0; i < N; i++) {
-            uniqueRoots.add(uf.find(i));
+            parent[i] = i;
         }
 
-        totalCost += (uniqueRoots.size() - 1) * K;
+        int cost = 0;
+        for (Edge edge : edges) {
+            int x = find(parent, edge.src);
+            int y = find(parent, edge.dest);
 
-        System.out.println(totalCost);
+            if (x != y) {
+                cost += edge.weight;
+                union(parent, x, y);
+            }
+        }
+
+        return Math.min(cost, K); // MST 총 비용이 K보다 크면 K로 대체
     }
 }
