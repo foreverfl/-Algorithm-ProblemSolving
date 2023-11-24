@@ -1,30 +1,29 @@
 package CodingMasters_2;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.HashSet;
 import java.util.Set;
 
 public class Solving_7897_WalkingTrail {
 
-    private static final int[][] DIRECTIONS = { { 0, 1 }, { 1, 0 }, { 0, -1 }, { -1, 0 } }; // N, E, S, W
+    public static final int[][] DIRECTIONS = { { 0, 1 }, { 1, 0 }, { 0, -1 }, { -1, 0 } }; // 북, 동, 남, 서
+    public static Set<String> uniquePaths = new HashSet<>();
 
-    public static void main(String[] args) {
-        int n = 4; // 예시 입력
-        System.out.println("Unique paths for N = 4: " + countUniquePaths(n));
-
-        n = 8; // 예시 입력
-        System.out.println("Unique paths for N = 8: " + countUniquePaths(n));
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int N = Integer.parseInt(br.readLine());
+        backtrack(0, 0, 0, N, new HashSet<>(), "");
+        System.out.println(uniquePaths.size());
     }
 
-    private static int countUniquePaths(int n) {
-        return backtrack(0, 0, 0, n, new HashSet<>());
-    }
-
-    private static int backtrack(int x, int y, int direction, int stepsRemaining, Set<String> visited) {
+    public static void backtrack(int x, int y, int direction, int stepsRemaining, Set<String> visited, String path) {
         if (stepsRemaining == 0) {
-            return 1;
+            uniquePaths.add(path);
+            return;
         }
 
-        int paths = 0;
         String pos = x + "," + y;
         visited.add(pos);
 
@@ -34,7 +33,7 @@ public class Solving_7897_WalkingTrail {
         int ny = y + DIRECTIONS[leftDir][1];
         String newPosLeft = nx + "," + ny;
         if (!visited.contains(newPosLeft)) {
-            paths += backtrack(nx, ny, leftDir, stepsRemaining - 1, visited);
+            backtrack(nx, ny, leftDir, stepsRemaining - 1, new HashSet<>(visited), path + "L");
         }
 
         // 우회전
@@ -43,10 +42,7 @@ public class Solving_7897_WalkingTrail {
         ny = y + DIRECTIONS[rightDir][1];
         String newPosRight = nx + "," + ny;
         if (!visited.contains(newPosRight)) {
-            paths += backtrack(nx, ny, rightDir, stepsRemaining - 1, visited);
+            backtrack(nx, ny, rightDir, stepsRemaining - 1, new HashSet<>(visited), path + "R");
         }
-
-        visited.remove(pos);
-        return paths;
     }
 }

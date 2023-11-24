@@ -6,6 +6,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "_7940_JackAndMagicTree",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7940_JackAndMagicTree",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "_7916_ToTheHigher",
+      "request": "launch",
+      "mainClass": "CodingMasters_2._7916_ToTheHigher",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Solving_7927_PattyPattyBurger",
+      "request": "launch",
+      "mainClass": "CodingMasters_2.Solving_7927_PattyPattyBurger",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
       "name": "Solving_7960_ExploringSpace",
       "request": "launch",
       "mainClass": "CodingMasters_2.Solving_7960_ExploringSpace",
