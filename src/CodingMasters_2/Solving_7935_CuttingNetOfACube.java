@@ -31,7 +31,7 @@ public class Solving_7935_CuttingNetOfACube {
             for (int j = 0; j < 10; j++) {
                 for (int[][] cube : cubes) {
                     int sum = 0;
-                    if (canPlaceCube(map, cube, i, j)) {
+                    if (canPlaceCube(cube, i, j)) {
                         for (int[] square : cube) {
                             sum += map[i + square[0]][j + square[1]];
                         }
@@ -52,12 +52,12 @@ public class Solving_7935_CuttingNetOfACube {
         cubes.add(new int[][] { { 0, 0 }, { 1, 0 }, { 1, 1 }, { 1, 2 }, { 1, 3 }, { 2, 2 } });
         cubes.add(new int[][] { { 0, 0 }, { 1, 0 }, { 1, 1 }, { 1, 2 }, { 1, 3 }, { 2, 3 } });
         // 둘째 줄
-        cubes.add(new int[][] { { 0, 1 }, { 1, 0 }, { 1, 1 }, { 1, 2 }, { 1, 3 }, { 2, 1 } });
-        cubes.add(new int[][] { { 0, 1 }, { 1, 0 }, { 1, 1 }, { 1, 2 }, { 1, 3 }, { 2, 2 } });
+        cubes.add(new int[][] { { 0, 0 }, { 1, -1 }, { 1, 0 }, { 1, 1 }, { 1, 2 }, { 2, 0 } });
+        cubes.add(new int[][] { { 0, 0 }, { 1, -1 }, { 1, 0 }, { 1, 1 }, { 1, 2 }, { 2, 1 } });
         // 셋째 줄
         cubes.add(new int[][] { { 0, 0 }, { 1, 0 }, { 1, 1 }, { 1, 2 }, { 2, 2 }, { 2, 3 } });
-        cubes.add(new int[][] { { 0, 1 }, { 1, 0 }, { 1, 1 }, { 1, 2 }, { 2, 2 }, { 2, 3 } });
-        cubes.add(new int[][] { { 0, 2 }, { 1, 0 }, { 1, 1 }, { 1, 2 }, { 2, 2 }, { 2, 3 } });
+        cubes.add(new int[][] { { 0, 0 }, { 1, -1 }, { 1, 0 }, { 1, 2 }, { 2, 1 }, { 2, 2 } });
+        cubes.add(new int[][] { { 0, 0 }, { 1, -2 }, { 1, -1 }, { 1, 0 }, { 2, 0 }, { 2, 1 } });
         // 넷째 줄
         cubes.add(new int[][] { { 0, 0 }, { 0, 1 }, { 0, 2 }, { 1, 2 }, { 1, 3 }, { 1, 4 } });
         cubes.add(new int[][] { { 0, 0 }, { 0, 1 }, { 1, 1 }, { 1, 2 }, { 2, 2 }, { 2, 3 } });
@@ -108,7 +108,7 @@ public class Solving_7935_CuttingNetOfACube {
     }
 
     // 원본 cube를 건드리지 않고 체크하기
-    public static boolean canPlaceCube(int[][] map, int[][] cube, int x, int y) {
+    public static boolean canPlaceCube(int[][] cube, int x, int y) {
         for (int[] square : cube) {
             int nx = x + square[0];
             int ny = y + square[1];

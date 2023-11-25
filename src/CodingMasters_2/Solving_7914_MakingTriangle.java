@@ -35,6 +35,6 @@ public class Solving_7914_MakingTriangle {
             }
         }
 
-        return 0;
+        return 3;
     }
 }
