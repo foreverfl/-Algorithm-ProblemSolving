@@ -1,7 +1,7 @@
 package algorithm;
 
 public class Dice {
-	private static class DiceExample {
+	public static class DiceExample {
 		int up, down, left, right, front, back;
 
 		public DiceExample() {
@@ -13,7 +13,7 @@ public class Dice {
 			back = 2;
 		}
 
-		private void rollDice(int dir) {
+		public void rollDice(int dir) {
 			if (dir == 0)
 				toNorth();
 			else if (dir == 1)
@@ -58,11 +58,11 @@ public class Dice {
 
 	}
 
-	private static int reverseDir(int dir) {
+	public static int reverseDir(int dir) {
 		return (dir + 2) % 4;
 	}
 
-	private static int getNextDir(int diceBottom, int boardNum, int dir) {
+	public static int getNextDir(int diceBottom, int boardNum, int dir) {
 		if (diceBottom > boardNum) { // clockwise
 			return (dir + 1) % 4;
 		} else if (diceBottom < boardNum) { // counter-clockwise

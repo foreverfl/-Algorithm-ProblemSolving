@@ -2,6 +2,7 @@ package programmers;
 
 public class Programmers_42898_OnesWayToSchool {
 
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		int m = 4;
 		int n = 3;

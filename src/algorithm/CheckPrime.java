@@ -1,7 +1,7 @@
 package algorithm;
 
 public class CheckPrime {
-	private static boolean checkPrime(long num) {
+	public static boolean checkPrime(long num) {
 		if (num <= 1)
 			return false;
 

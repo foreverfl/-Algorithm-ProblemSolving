@@ -10,8 +10,9 @@ public class Copied_Programmers_132266_TroopsWhoComesBack {
 
 	public static void main(String[] args) {
 
-//		int[] arr = solution(3, new int[][] { { 1, 2 }, { 2, 3 } }, new int[] { 2, 3 }, 1);
-//		System.out.println(Arrays.toString(arr));
+		// int[] arr = solution(3, new int[][] { { 1, 2 }, { 2, 3 } }, new int[] { 2, 3
+		// }, 1);
+		// System.out.println(Arrays.toString(arr));
 
 		int[] arr = solution(5, new int[][] { { 1, 2 }, { 1, 4 }, { 2, 4 }, { 2, 5 }, { 4, 5 } }, new int[] { 1, 3, 5 },
 				5);
@@ -20,10 +21,10 @@ public class Copied_Programmers_132266_TroopsWhoComesBack {
 	}
 
 	private static List<Integer>[] list;
-	private static boolean[] visited;
 	private static int[] dist;
 	private static final int MAX = 100000000;
 
+	@SuppressWarnings("unchecked")
 	public static int[] solution(int n, int[][] roads, int[] sources, int destination) {
 		list = new ArrayList[n + 1];
 		dist = new int[n + 1];

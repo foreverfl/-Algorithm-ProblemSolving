@@ -9,6 +9,7 @@ public class Programmers_81301_NumberStringAndWords {
 		String input = sc.next();
 		int result = solution(input);
 		System.out.println(result);
+		sc.close();
 	}
 
 	private static int solution(String s) {

@@ -7,13 +7,13 @@ public class SieveOfEratosthenes {
 
 	private static boolean[] isPrime;
 
-	private static void checkPrime(int num) {
+	public static void checkPrime(int num) {
 		isPrime = new boolean[num + 1];
 		Arrays.fill(isPrime, true);
 		/*
-		소수가 아닌 index = true
-		소수인 index = false
-		*/
+		 * 소수가 아닌 index = true
+		 * 소수인 index = false
+		 */
 
 		// 2 미만의 N 을 입력받으면 소수는 판별할 필요 없으므로 바로 리턴
 		if (num < 2) {

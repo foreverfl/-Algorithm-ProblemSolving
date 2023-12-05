@@ -2,6 +2,7 @@ package programmers;
 
 public class Programmers_42889_RateOfFail {
 
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 
 		int[] stages_1 = { 2, 1, 2, 6, 2, 4, 3, 3 };
@@ -9,11 +10,11 @@ public class Programmers_42889_RateOfFail {
 		int[] stages_2 = { 1, 2, 2, 1, 3 };
 		int N_2 = 5;
 
-//		for (int i = 0; i < solution(N_1, stages_1).length; i++) {
-//			System.out.print(solution(N_1, stages_1)[i] + " ");
-//		}
-//
-//		System.out.println();
+		// for (int i = 0; i < solution(N_1, stages_1).length; i++) {
+		// System.out.print(solution(N_1, stages_1)[i] + " ");
+		// }
+		//
+		// System.out.println();
 
 		for (int i = 0; i < solution(N_2, stages_2).length; i++) {
 			System.out.print(solution(N_2, stages_2)[i] + " ");

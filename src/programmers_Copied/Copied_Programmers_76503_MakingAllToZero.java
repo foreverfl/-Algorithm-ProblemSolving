@@ -18,6 +18,7 @@ public class Copied_Programmers_76503_MakingAllToZero {
 	private static long[] long_a; // 연산 수행 위한 long배열
 	private static long result;
 
+	@SuppressWarnings("unchecked")
 	public static long solution(int[] a, int[][] edges) {
 		long_a = new long[a.length];
 		list = new ArrayList[a.length];

@@ -1,7 +1,5 @@
 package programmers;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
@@ -9,11 +7,11 @@ import java.util.Set;
 public class Programmers_42839_FindingPrimeNumbers {
 
 	public static void main(String[] args) {
-//		String numbers_1 = "17";
-//		System.out.println(solution(numbers_1));
-//
-//		String numbers_2 = "011";
-//		System.out.println(solution(numbers_2));
+		// String numbers_1 = "17";
+		// System.out.println(solution(numbers_1));
+		//
+		// String numbers_2 = "011";
+		// System.out.println(solution(numbers_2));
 
 		String numbers_3 = "1231";
 		System.out.println(solution(numbers_3));
