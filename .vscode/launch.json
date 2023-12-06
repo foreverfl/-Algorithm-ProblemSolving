@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Programmers_250137_Bandage",
+      "request": "launch",
+      "mainClass": "programmers.Programmers_250137_Bandage",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
       "name": "_7940_JackAndMagicTree",
       "request": "launch",
       "mainClass": "CodingMasters_2._7940_JackAndMagicTree",
