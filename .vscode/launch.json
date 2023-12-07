@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Programmers_12973_RemovingPair",
+      "request": "launch",
+      "mainClass": "programmers.Programmers_12973_RemovingPair",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Programmers_12951_JadenCase",
+      "request": "launch",
+      "mainClass": "programmers.Programmers_12951_JadenCase",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
       "name": "Programmers_250137_Bandage",
       "request": "launch",
       "mainClass": "programmers.Programmers_250137_Bandage",
