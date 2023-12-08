@@ -6,6 +6,41 @@
   "configurations": [
     {
       "type": "java",
+      "name": "S_007_DataHistogram",
+      "request": "launch",
+      "mainClass": "paiza.S_007_DataHistogram",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "A051_KnockingDownaSign",
+      "request": "launch",
+      "mainClass": "paiza.A051_KnockingDownaSign",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "A066_ServiceRecord",
+      "request": "launch",
+      "mainClass": "paiza.A066_ServiceRecord",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "B138_Doughnut",
+      "request": "launch",
+      "mainClass": "paiza.B138_Doughnut",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "C084_Wrapping",
+      "request": "launch",
+      "mainClass": "paiza.C084_Wrapping",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
       "name": "Programmers_12973_RemovingPair",
       "request": "launch",
       "mainClass": "programmers.Programmers_12973_RemovingPair",
