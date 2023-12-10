@@ -6,6 +6,48 @@
   "configurations": [
     {
       "type": "java",
+      "name": "D270_Skydiving",
+      "request": "launch",
+      "mainClass": "paiza.D270_Skydiving",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "C140_SellingContact",
+      "request": "launch",
+      "mainClass": "paiza.C140_SellingContact",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "tmp",
+      "request": "launch",
+      "mainClass": "paiza.tmp",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "S061_TowerToCollectCoin",
+      "request": "launch",
+      "mainClass": "paiza.S061_TowerToCollectCoin",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Backtracking_1",
+      "request": "launch",
+      "mainClass": "algorithm.Backtracking_1",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "Backtracking_2",
+      "request": "launch",
+      "mainClass": "algorithm.Backtracking_2",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
       "name": "S_007_DataHistogram",
       "request": "launch",
       "mainClass": "paiza.S_007_DataHistogram",
