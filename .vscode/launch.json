@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "B131_CalculatingFare",
+      "request": "launch",
+      "mainClass": "paiza.B131_CalculatingFare",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "S002_MeasuringShortestRoute",
+      "request": "launch",
+      "mainClass": "paiza.S002_MeasuringShortestRoute",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
       "name": "D270_Skydiving",
       "request": "launch",
       "mainClass": "paiza.D270_Skydiving",
