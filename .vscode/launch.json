@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "B108_OperationStatusofFerrisWheel",
+      "request": "launch",
+      "mainClass": "paiza.B108_OperationStatusofFerrisWheel",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "D271_RopeSkippingContest",
+      "request": "launch",
+      "mainClass": "paiza.D271_RopeSkippingContest",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
       "name": "B131_CalculatingFare",
       "request": "launch",
       "mainClass": "paiza.B131_CalculatingFare",
