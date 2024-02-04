@@ -6,6 +6,48 @@
   "configurations": [
     {
       "type": "java",
+      "name": "AtCoder_Daily_Training_ALL_240130",
+      "request": "launch",
+      "mainClass": "atcoder.AtCoder_Daily_Training_ALL_240130",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "A078_ACrossPuzzle",
+      "request": "launch",
+      "mainClass": "paiza.A078_ACrossPuzzle",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "B143_RockScissorsPaperTrain",
+      "request": "launch",
+      "mainClass": "paiza.B143_RockScissorsPaperTrain",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "C097_ImplementationOfAGiftApplicationCampaign",
+      "request": "launch",
+      "mainClass": "paiza.C097_ImplementationOfAGiftApplicationCampaign",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "B117_InstructionCar",
+      "request": "launch",
+      "mainClass": "paiza.B117_InstructionCar",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "B142_BlackStone",
+      "request": "launch",
+      "mainClass": "paiza.B142_BlackStone",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
       "name": "B109_ReservingSeatofTheater",
       "request": "launch",
       "mainClass": "paiza.B109_ReservingSeatofTheater",
