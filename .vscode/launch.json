@@ -6,6 +6,34 @@
   "configurations": [
     {
       "type": "java",
+      "name": "math_and_algorithm_005_Modulo_100",
+      "request": "launch",
+      "mainClass": "atcoder.math_and_algorithm_005_Modulo_100",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "math_and_algorithm_004_Product_of_3_Integers",
+      "request": "launch",
+      "mainClass": "atcoder.math_and_algorithm_004_Product_of_3_Integers",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "math_and_algorithm_003_Sum_of_N_Integers",
+      "request": "launch",
+      "mainClass": "atcoder.math_and_algorithm_003_Sum_of_N_Integers",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "math_and_algorithm_002_Sum_of_3_Integers",
+      "request": "launch",
+      "mainClass": "atcoder.math_and_algorithm_002_Sum_of_3_Integers",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
       "name": "AtCoder_Daily_Training_ALL_240130",
       "request": "launch",
       "mainClass": "atcoder.AtCoder_Daily_Training_ALL_240130",
