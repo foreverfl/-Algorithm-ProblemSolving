@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Programmers_12929_TheNumberOfValidParentheses",
+      "request": "launch",
+      "mainClass": "programmers.Programmers_12929_TheNumberOfValidParentheses",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
       "name": "math_and_algorithm_005_Modulo_100",
       "request": "launch",
       "mainClass": "atcoder.math_and_algorithm_005_Modulo_100",
