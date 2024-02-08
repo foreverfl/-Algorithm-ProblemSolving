@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Programmers_152995_PerformanceRating",
+      "request": "launch",
+      "mainClass": "programmers.Programmers_152995_PerformanceRating",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
       "name": "Programmers_12929_TheNumberOfValidParentheses",
       "request": "launch",
       "mainClass": "programmers.Programmers_12929_TheNumberOfValidParentheses",
