@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Programmers_72416_MinimizingSalesDecline",
+      "request": "launch",
+      "mainClass": "programmers.Programmers_72416_MinimizingSalesDecline",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
       "name": "Programmers_152995_PerformanceRating",
       "request": "launch",
       "mainClass": "programmers.Programmers_152995_PerformanceRating",
