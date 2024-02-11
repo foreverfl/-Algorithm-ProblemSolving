@@ -6,6 +6,41 @@
   "configurations": [
     {
       "type": "java",
+      "name": "abc340_E_Mancala2",
+      "request": "launch",
+      "mainClass": "atcoder.abc340_E_Mancala2",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "abc340_D_Super_Takahashi_Bros",
+      "request": "launch",
+      "mainClass": "atcoder.abc340_D_Super_Takahashi_Bros",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "abc340_C_Divide_and_Divide",
+      "request": "launch",
+      "mainClass": "atcoder.abc340_C_Divide_and_Divide",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "abc340_B_Apped",
+      "request": "launch",
+      "mainClass": "atcoder.abc340_B_Apped",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
+      "name": "abc340_A_Arithmetic_Progression",
+      "request": "launch",
+      "mainClass": "atcoder.abc340_A_Arithmetic_Progression",
+      "projectName": "ProblemSolving"
+    },
+    {
+      "type": "java",
       "name": "Programmers_72416_MinimizingSalesDecline",
       "request": "launch",
       "mainClass": "programmers.Programmers_72416_MinimizingSalesDecline",
